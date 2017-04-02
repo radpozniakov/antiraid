@@ -2,6 +2,7 @@
 body h1{
 	color:blue;
 }
+/*  ====================    OUR HEADER   ====================*/
 header{
 	.localization{
 		background-color:$lightGrey;
@@ -217,9 +218,141 @@ header{
 		}
 	}
 }
+/*  ====================    TITLE FOR PAGE    ====================*/
+.title-page{
+		margin-top:24px;
+		width:100%;
+		padding: 24px 0px;
+		background-color:$white;
+		h1{
+			padding: 0px;
+			margin:0px;
+			text-align: center;
+			@include font($Sams,1.5rem,400,$red);
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+		}
+	}
+/*  ====================    SOCIAL FOOTER FOR PAGE    ====================*/
+	.social-foot{
+		background-color:$white;
+		margin:24px 0px 24px;
+		ul{
+			list-style: none;
+			display: flex;
+			justify-content: space-around;
+			li{
+				padding: 36px 0px 38px;
+				a{
+					@include font($Sams,0.95rem,300,$dark_grey);
+					text-decoration: none;
+				}
+				i{
+					font-size: 1.3125rem;
+					&.fa-twitter{
+						color:#009CF9;
+					}
+					&.fa-facebook{
+						color:#3B5998;
+					}
+					&.fa-vk{
+						color:#50719C;
+					}
+				}
+				&:hover a{
+					text-decoration: underline;
+					color:$red;
+					cursor:pointer;
+				}
+				&:hover i{
+					color:$red;
+				}
+			}   
+		}
+	}
+/*  ====================    MAIN RULES    ====================*/
+main.container-fluid{
+background-color:$lightGrey;
+	.container{
+		padding: 0px
+	}
+}
+/*  ====================    CONTACTS    ====================*/
+
+main.container-fluid.contacts{
+	.container{
+		padding: 0px
+	}
+	background-color:$lightGrey;
+	
+	.main-content{
+		margin-top:24px;
+		background-color: $white;
+		padding: 50px 0px 59px;
+		@include font($Sams,1rem,400,$dark_grey);
+		line-height: 1.5rem;
+		h3{
+			margin:0px;
+			font-size:1.5rem;
+			color:$main_black;
+			font-weight: 400;
+		}
+		p{
+			&:first-of-type{
+				margin:24px 0px;
+			}
+			&:nth-of-type(3){
+				margin:14px 0px 0px;
+			}
+		}
+		i{
+			color:$red;
+			margin-right:5px;
+		}
+		 form .form-group{
+			label{
+				display:block;
+				margin-bottom:10px;
+			}
+			input,textarea{
+				width:100%;
+				outline: none;
+				background: $lightGrey;
+				border:none;
+				padding: 14px 0px 14px 10px;
+			}
+			input{
+				margin-bottom: 22px;
+			}
+			textarea{
+				margin-bottom: 25px;
+				resize: none;
+				
+			}
+		}
+		button{
+				text-transform: uppercase;
+				padding: 10px 33px 11px;
+				background: $red;
+				border:none;
+				@include font($Sams,1.125rem,400,$white);
+				&:hover{
+					background-color:darken($red,10%);
+				}
+		}
+	}
+
+
+
+}
+/*  ====================    OUR_FOOTER    ====================*/
 footer{
 	background: $main_black;
 	@include font($Sams,1rem,300,$white);
+
+	.container{
+		padding: 0px
+	}
 	.top-footer{
 		display: flex;
 		justify-content: flex-start;
@@ -314,108 +447,4 @@ footer{
 			@include font($Sams,0.75rem,300,$dark_grey);
 		}
 	}
-}
-main.container-fluid{
-
-	background-color:$lightGrey;
-	.title-page{
-		margin-top:24px;
-		width:100%;
-		padding: 24px 0px;
-		background-color:$white;
-		h1{
-			padding: 0px;
-			margin:0px;
-			text-align: center;
-			@include font($Sams,1.5rem,400,$red);
-			letter-spacing: 1.5px;
-			text-transform: uppercase;
-		}
-	}
-	.main-content{
-		margin-top:24px;
-		background-color: $white;
-		padding: 50px 0px 59px;
-		@include font($Sams,1rem,400,$dark_grey);
-		line-height: 1.5rem;
-		h3{
-			margin:0px;
-			font-size:1.5rem;
-			color:$main_black;
-			font-weight: 400;
-		}
-		p{
-			&:first-of-type{
-				margin:24px 0px;
-			}
-			&:nth-of-type(3){
-				margin:14px 0px 0px;
-			}
-		}
-		i{
-			color:$red;
-			margin-right:5px;
-		}
-		 form .form-group{
-			label{
-				display:block;
-				margin-bottom:10px;
-			}
-			input,textarea{
-				width:100%;
-				outline: none;
-				background: $lightGrey;
-				border:none;
-				padding: 14px 0px 14px 10px;
-			}
-			input{
-				margin-bottom: 22px;
-			}
-			textarea{
-				margin-bottom: 25px;
-				resize: none;
-				
-			}
-		}
-		button{
-				text-transform: uppercase;
-				padding: 10px 33px 11px;
-				background: $red;
-				border:none;
-				@include font($Sams,1.125rem,400,$white);
-				&:hover{
-					background-color:darken($red,10%);
-				}
-		}
-	}
-
-	.social-foot{
-		background-color:$white;
-		margin:24px 0px 24px;
-		ul{
-			list-style: none;
-			display: flex;
-			justify-content: space-around;
-			li{
-				padding: 36px 0px 38px;
-				a{
-					@include font($Sams,0.95rem,300,$dark_grey);
-					text-decoration: none;
-				}
-				i{
-					font-size: 1.3125rem;
-					&.fa-twitter{
-						color:#009CF9;
-					}
-					&.fa-facebook{
-						color:#3B5998;
-					}
-					&.fa-vk{
-						color:#50719C;
-					}
-				}
-			}
-		}
-	}
-
 }
