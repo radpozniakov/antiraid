@@ -8,7 +8,7 @@
                 <use xlink:href="#path-1"></use>
             </mask>
             <use id="Mask" fill="#000D89" xlink:href="#path-1"></use>
-            <path d="M172,103 L172,0 L93,0 L93,103 L0,103 L0,163 L93,163 L93,266 L172,266 L172,163 L266,163 L266,103 L172,103 Z" id="Combined-Shape" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            <path d="M189,88 L189,0 L78,0 L78,88 L0,88 L0,179 L78,179 L78,266 L189,266 L189,179 L266,179 L266,88 L189,88 Z" id="Combined-Shape" fill="#FFFFFF" mask="url(#mask-2)"></path>
             <rect id="Rectangle-3" fill="#CF142B" mask="url(#mask-2)" x="105" y="-6" width="56" height="302"></rect>
             <rect id="Rectangle-4" fill="#CF142B" mask="url(#mask-2)" x="-17" y="112" width="310" height="43"></rect>
         </g>
