@@ -1,0 +1,105 @@
+@import 'variables.scss';
+body h1{
+	color:blue;
+}
+header{
+	.localization{
+		background-color:$grey;
+		padding: 5px 0px 3px;
+		ul{
+			margin:0px;
+			padding: 0px;
+			list-style: none;
+			float: right;
+			text-align: right;
+			
+			width:120px;
+			li{
+				height: 16px;
+				width: 16px;
+				display: inline-block;
+				margin-left: 10px;
+				
+				a{
+					display: block;
+					width: 100%;
+					height:100%;
+					background-repeat:no-repeat;
+					background-size: cover;
+					
+				}
+				&:nth-child(1) a{
+						background-image: url(../img/flags/ukraine_flag.svg);
+					}
+				&:nth-child(2) a{
+						background-image: url(../img/flags/russia_flag.svg);
+					}
+				&:nth-child(3) a{
+						background-image: url(../img/flags/united_flag.svg);
+					}
+			}
+		}
+
+	}
+	.top-head{
+	.container{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 25px 0px;
+		.logo-group{
+			width: 31.28%;
+			display: flex;
+			justify-content: space-between;
+			.logo{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+			.logo-info{
+				width: 66.66%;
+				.logo-title{
+					margin:0px 0px 8px;
+					@include font($Sams,1.75rem,500,$main_black);
+				}
+				.logo-description{
+					@include font($Sams,1.125rem,400,$main_black);
+				}
+			}
+		}
+		.head-contacts{
+			margin:0px auto;
+			width: 32.30%;
+			ul{
+				list-style:none;
+				margin:0px;
+				padding: 0px;
+				display: flex;
+				justify-content: space-between;
+				i{
+					color:$red;
+				}
+			}
+
+		}
+		.head-button{
+			width: 20.94%;
+			a{
+				font-size: 1.0625rem;
+				border-radius: 5px;
+				padding: 13px 57px;
+				background-color: $red;
+				text-decoration: none;
+				text-align: center;
+				display: inline-block;
+				color:white;
+				&:hover {
+			        background-color:darken($red,10%);
+			    }
+			}
+		}
+	}
+	
+
+}
+}

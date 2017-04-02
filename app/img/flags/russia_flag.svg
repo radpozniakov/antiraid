@@ -1,0 +1,16 @@
+<svg width="266px" height="266px" viewBox="0 0 266 266" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <circle id="path-1" cx="133" cy="133" r="133"></circle>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-1-+-Rectangle-1-Copy-Mask">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#D8D8D8" xlink:href="#path-1"></use>
+            <rect id="Rectangle-1-Copy" fill="#FFFFFF" mask="url(#mask-2)" x="0" y="0" width="266" height="93"></rect>
+            <rect id="Rectangle-1-Copy-2" fill="#002DC6" mask="url(#mask-2)" x="0" y="93" width="266" height="93"></rect>
+            <rect id="Rectangle-1-Copy-3" fill="#FF3F36" mask="url(#mask-2)" x="0" y="186" width="266" height="93"></rect>
+        </g>
+    </g>
+</svg>

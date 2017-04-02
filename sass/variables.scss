@@ -1,13 +1,11 @@
 //Colors
-$DarkBlue: #143A4C;
-$LightBlue: #275D74;
-$Gray: #EDEDED;
-$white: #fff;
-$DarkGray: #a7a7a7;
-$Red: #FF3300;
 
-$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$pt-serif: 'PT Serif Caption', serif;
+$red:#F44336;
+$main_black:#2B2B2B;
+$grey:#C8C8C8;
+$dark_grey:#6A6A6A;
+$white:#FFFFFF;
+
 
 
 @mixin font($family-type, $size: 1rem, $weight : normal, $color : $DarkBlue){
@@ -18,3 +16,6 @@ $pt-serif: 'PT Serif Caption', serif;
   }
   color: $color;
 }
+
+$Sams:'Roboto',"Helvetica Neue", Helvetica, Arial, sans-serif;
+$Serif:'Georgia',serif;

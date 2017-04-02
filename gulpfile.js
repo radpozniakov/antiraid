@@ -7,7 +7,7 @@ var gulp       = require('gulp'),
 
 
 gulp.task('sass', function() {
-  return gulp.src('./sass/**/bindle.scss')
+  return gulp.src('./sass/**/custom.scss')
     .pipe(sass({
       includePaths: ['./bower_components/breakpoint-sass/stylesheets']
     }).on('error', sass.logError))
