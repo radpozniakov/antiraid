@@ -4,7 +4,7 @@ body h1{
 }
 header{
 	.localization{
-		background-color:$grey;
+		background-color:$lightGrey;
 		padding: 5px 0px 3px;
 		ul{
 			margin:0px;
@@ -42,64 +42,176 @@ header{
 
 	}
 	.top-head{
-	.container{
-		display:flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 25px 0px;
-		.logo-group{
-			width: 31.28%;
-			display: flex;
+		.container{
+			display:flex;
 			justify-content: space-between;
-			.logo{
-				width: 100px;
-				height: 100px;
-				background-color: red;
-			}
-			.logo-info{
-				width: 66.66%;
-				.logo-title{
-					margin:0px 0px 8px;
-					@include font($Sams,1.75rem,500,$main_black);
+			align-items: center;
+			padding: 25px 0px;
+			.logo-group{
+				width: 31.28%;
+				display: flex;
+				justify-content: space-between;
+				.logo{
+					width: 100px;
+					height: 100px;
+					svg{
+
+						path{
+								
+								stroke:$red;
+						}
+						circle{
+								stroke:$red;
+						}
+						&:hover{
+							path{
+								fill:black;
+								stroke:grey;
+							}
+							circle{
+									stroke:grey;
+							}
+						}
+					}
+
 				}
-				.logo-description{
-					@include font($Sams,1.125rem,400,$main_black);
+				.logo-info{
+					width: 66.66%;
+					.logo-title{
+						margin:0px 0px 8px;
+						@include font($Sams,1.75rem,500,$main_black);
+					}
+					.logo-description{
+						@include font($Sams,1.125rem,400,$main_black);
+					}
+				}
+			}
+			.head-contacts{
+				margin:0px auto;
+				width: 32.30%;
+				ul{
+					list-style:none;
+					margin:0px;
+					padding: 0px;
+					display: flex;
+					justify-content: space-between;
+					i{
+						color:$red;
+					}
+					p{
+						@include font($Sams,1.125rem,400,$main_black);
+					}
+				}
+
+			}
+			.head-button{
+				width: 20.94%;
+				a{
+					font-size: 1.0625rem;
+					border-radius: 5px;
+					padding: 13px 57px;
+					background-color: $red;
+					text-decoration: none;
+					text-align: center;
+					display: inline-block;
+					color:white;
+					&:hover {
+				        background-color:darken($red,10%);
+				    }
 				}
 			}
 		}
-		.head-contacts{
-			margin:0px auto;
-			width: 32.30%;
-			ul{
-				list-style:none;
-				margin:0px;
-				padding: 0px;
-				display: flex;
-				justify-content: space-between;
-				i{
+
+	}
+	.navigation-top{
+		background-color:$main_black;
+		ul{
+			padding: 0px;
+			margin:0px;
+			list-style: none;
+			display: flex;
+			justify-content: space-around;
+			li{
+				
+				padding: 23px 0px;
+				a{
+					text-decoration: none;
+					@include font($Sams,1rem,400,$white);
+					text-transform: uppercase;
+				}
+				&.active{
+					border-bottom: 4px solid $red;
+					color:$red;
+					a{
+						color:$red;
+					}
+				}
+				
+				&:hover a{
 					color:$red;
 				}
 			}
-
-		}
-		.head-button{
-			width: 20.94%;
-			a{
-				font-size: 1.0625rem;
-				border-radius: 5px;
-				padding: 13px 57px;
-				background-color: $red;
-				text-decoration: none;
-				text-align: center;
-				display: inline-block;
-				color:white;
-				&:hover {
-			        background-color:darken($red,10%);
-			    }
-			}
 		}
 	}
-	
+	.bottom-head .container{
+		padding: 20px 0px 25px;
+		display: flex;
+		
+		align-items: center;
+		ul{
+			margin:0px;
+			padding: 0px;
+			display: flex;
+			list-style: none;
+			justify-content: flex-start;
+			li{
+				margin-right: 25px;
+				a{
+					@include font($Sams,1rem,300,$dark_grey);
+					text-decoration: none;
 
-}
+				}
+				a:hover{
+						text-decoration:underline;
+						color:darken($dark_grey,20%);
+					}
+			}
+		}
+		.search{
+			margin-left: auto;
+			input{
+				position: relative;
+				width: 298px;
+				padding: 8px 0px 9px 10px;
+				border:1px solid $grey;
+				outline: none;
+				border-right: none;
+				@include font($Sams,1rem,300,$main_black);
+			}
+			.search::-webkit-input-placeholder {
+  				@include font($Sams,0.9375rem,300,$dark_grey);
+
+			}
+			.search::-moz-input-placeholder {
+			 	@include font($Sams,0.9375rem,300,$dark_grey);
+			}
+			.search::-ms-input-placeholder {
+				@include font($Sams,0.9375rem,300,$dark_grey);
+			 }
+			 span{
+			 	margin-left: -5px;
+			 	/*padding: 3px 0px 5px 0px;*/
+			 	button{
+			 		height: 37px;
+			 		width: 37px;
+			 		padding: 7px 0px 9px;
+			 		background-color: $red;
+			 		color:white;
+			 		border:1px solid $grey;
+			 		border-left: none;
+			 		outline: none;
+			 	}
+			 }
+		}
+	}
 }
