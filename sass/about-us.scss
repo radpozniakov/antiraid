@@ -1,0 +1,66 @@
+/*  ====================    ABOUT US   ====================*/
+main.container-fluid.about{
+	h2{
+			text-align: center;
+			margin-top: 0px;
+			@include font($Sams,1.75rem,300,$main_black);
+	}
+	.our-help{
+		margin-bottom: 24px;
+		padding: 30px 0px 70px;
+
+		p{
+			@include font($Serif,1rem,400,main_black);
+			line-height: 1.6875rem;
+			width: 65.2%;
+			margin: 26px auto 0px;
+		}
+	}
+	.our-comand{
+		margin-bottom: 24px;
+		padding: 30px 0px 70px;
+
+		ul{
+			display: flex;
+			width: 65.2%;
+			flex-wrap: wrap;
+			margin: 45px auto 0px;
+			padding: 0px;
+			list-style: none;
+			justify-content: space-between;
+			li{
+				width: 33%;
+				text-align: center;
+				margin-bottom: 15px;
+				.logo{
+					img{
+						margin:0px auto;
+						width: 120px;
+						height: 120px;
+						border-radius: 50%;
+					}
+				}
+				h5{
+					margin:10px 0px;
+					@include font($Sams,1.125rem,500,$main_black);
+				}
+				p{
+					@include font($Sams,0.875rem,400,$main_black);
+					margin-bottom: 15px;
+					&:nth-of-type(2){
+						font-weight:500px;
+						color:$dark_grey;
+					}
+				}
+				
+			}
+
+		}
+	}
+	.our-sponsors{
+		padding: 30px 0px 70px;
+	}
+
+
+
+}

@@ -1,0 +1,65 @@
+/*  ====================    CONTACTS    ====================*/
+
+main.container-fluid.contacts{
+	
+	
+	.main-content{
+		
+		background-color: $white;
+		padding: 50px 0px 59px;
+		@include font($Sams,1rem,400,$dark_grey);
+		line-height: 1.5rem;
+		h3{
+			margin:0px;
+			font-size:1.5rem;
+			color:$main_black;
+			font-weight: 400;
+		}
+		p{
+			&:first-of-type{
+				margin:24px 0px;
+			}
+			&:nth-of-type(3){
+				margin:14px 0px 0px;
+			}
+		}
+		i{
+			color:$red;
+			margin-right:5px;
+		}
+		 form .form-group{
+			label{
+				display:block;
+				margin-bottom:10px;
+			}
+			input,textarea{
+				width:100%;
+				outline: none;
+				background: $lightGrey;
+				border:none;
+				padding: 14px 0px 14px 10px;
+			}
+			input{
+				margin-bottom: 22px;
+			}
+			textarea{
+				margin-bottom: 25px;
+				resize: none;
+				
+			}
+		}
+		button{
+				text-transform: uppercase;
+				padding: 10px 33px 11px;
+				background: $red;
+				border:none;
+				@include font($Sams,1.125rem,400,$white);
+				&:hover{
+					background-color:darken($red,10%);
+				}
+		}
+	}
+
+
+
+}

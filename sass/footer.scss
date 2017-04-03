@@ -1,0 +1,103 @@
+/*  ====================    OUR_FOOTER    ====================*/
+footer{
+	background: $main_black;
+	@include font($Sams,1rem,300,$white);
+
+	.container{
+		padding: 0px
+	}
+	.top-footer{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		border-bottom:2px solid $dark_grey;
+		padding: 50px 0px 46px;
+		.about-us{
+			width: 45%;
+			.foot-logo-title{
+				margin:0px;
+				font-size: 1.75rem;
+				font-weight: 400;
+			}
+			.foot-logo-description{
+				line-height: 1.5rem;
+			}
+		}
+		.meta-foot{
+			margin-left:auto;
+			ul{
+				margin:0px 0px 20px;
+				padding: 0px;
+				list-style: none;
+				display: flex;
+				justify-content: flex-end;
+				
+				li{
+					width: 30px;
+					height: 30px;
+					text-align: center;
+					line-height: 27px;
+					border:2px solid $red;
+					border-radius: 50%;
+					margin-left: 10px;
+					a i{
+						color:$white;
+						font-size:0.98125rem;
+					}
+					&:hover a i{
+						color:$red;
+					}
+				}
+				
+			}
+			p{
+				margin:0px 0px 20px;
+				font-size:0.98125rem;
+				text-align: right;
+				i{
+					color:$red;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	nav{
+		ul{
+			margin:34px 0px 24px 0px;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			li{
+				list-style: circle,outside;
+				margin-right: 26px;
+				position: relative;
+				a{
+					text-transform: uppercase;
+					color:$dark_grey;
+					text-decoration: none;
+					line-height: 2rem;
+
+				}
+				&:not(:nth-child(1)):before{
+					color:$red;
+					content:'.';
+					position: absolute;
+					left:-22px;
+					top:-55px;
+					font-size: 80px;
+				}
+				&:hover a{
+					color:$red;
+				}
+			}
+		}
+	}
+	.from{
+		p{
+			margin:0px 0px 35px 0px;
+			text-align: center;
+			@include font($Sams,0.75rem,300,$dark_grey);
+		}
+	}
+}
