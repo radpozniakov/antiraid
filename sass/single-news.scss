@@ -58,13 +58,3 @@ ul.share-social{
     }
   }
 }
-span.tag-for-news{
-  margin-right: 10px;
-  a {
-    @include font($Sams, 0.9rem, 400, $grey);
-    text-decoration: none;
-    &:hover{
-      color: $red;
-    }
-  }
-}
