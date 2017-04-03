@@ -109,3 +109,7 @@ span.tag-for-news{
 	}
 }
 //////////////12345
+span.time{
+	
+	@include font($Sams, 0.9rem, 400, $grey);
+}

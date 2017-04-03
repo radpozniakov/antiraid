@@ -1,3 +1,28 @@
-h2{
+.main-content{
+	.news{
+		margin-bottom: 24px;
+		display: flex;
+		flex-direction: row;
+		flex-grow: 1;
+		.content{
+			border-top:3px solid $red;
+			padding: 14px 20px 30px;
+			p{
+				margin:17px 0px 50px;
+				@include font($Sams, 1rem, 400, $main_black);
+				line-height: 1.625rem;
+			}
+			h2{
+				margin-top:20px;
+			}
+		}
+		.img{
+			height:100%;
+			background-image: url(../img/omon.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
 	
 }
