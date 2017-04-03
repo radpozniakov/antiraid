@@ -26,7 +26,14 @@
   	}
   	
 }
+/*  ====================    TITLE FOR PAGE    ====================*/
+h2.item-card{
+	margin:0px;
+	padding:0px;
+	text-align:left;
+	@include font($Sams,1.5rem,400,$main_black);
 
+}
 /*  ====================    TITLE FOR PAGE    ====================*/
 .title-page{
 		margin-top:24px;
