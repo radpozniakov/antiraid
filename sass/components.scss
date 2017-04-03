@@ -5,6 +5,28 @@
 .uppercase{
 	text-transform: uppercase;
 }
+/*  ====================    TAG A "MORE"    ====================*/
+
+.a-more{
+	text-align:center;
+  	a{
+  		display:inline-block;
+  		background:white;
+  		padding: 14px 112px;
+  		border:2px solid $red;
+  		@include font($Sams,1.125rem,500,$red);
+  		margin:50px auto;
+  		transition-duration: 200ms;
+  		text-decoration: none;
+  		&:hover {
+			background:$red;
+			color:$white;
+
+  		}
+  	}
+  	
+}
+
 /*  ====================    TITLE FOR PAGE    ====================*/
 .title-page{
 		margin-top:24px;

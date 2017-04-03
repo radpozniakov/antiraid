@@ -51,11 +51,14 @@ main.container-fluid.contacts{
 		button{
 				text-transform: uppercase;
 				padding: 10px 33px 11px;
-				background: $red;
-				border:none;
-				@include font($Sams,1.125rem,400,$white);
+				background: $white;
+				
+				transition-duration: 200ms;
+				border:2px solid $red;
+				@include font($Sams,1.125rem,400,$red);
 				&:hover{
-					background-color:darken($red,10%);
+					background-color:$red;
+					color:$white;
 				}
 		}
 	}
