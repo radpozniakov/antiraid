@@ -10,11 +10,14 @@
 	}
 }
 .album-list{
+	figure{
+		margin: 0px;
+	}
 	display:flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	.album-item{
-		width: 32%;
+		width: 32.3%;
 		margin-bottom: 24px;
 		img{
 			width: 100%;
