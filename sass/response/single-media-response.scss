@@ -1,0 +1,44 @@
+@include breakpoint(max-width 1200px){
+  .album-list{
+    .album-item{
+      width: 31.7%;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@include breakpoint(max-width 992px){
+  .album-list{
+    .album-item{
+      width: 48.4%;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@include breakpoint(max-width 718px){
+  .album-list{
+    .album-item{
+      width: 48%;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@include breakpoint(max-width 582px){
+  .album-list{
+    .album-item{
+      width: 47.9%;
+      margin-bottom: 24px;
+    }
+  }
+}
+@include breakpoint(max-width 554px){
+  .album-list{
+    .album-item{
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+}
+
