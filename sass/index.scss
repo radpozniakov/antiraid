@@ -13,26 +13,25 @@
 				position: absolute;
 				height: 100%;
 				width:100%;
-				background-color: rgba(0,0,0,.35);
+				background-color: rgba(0,0,0,.25);
 				z-index: 5;
 			}
 			.index-slider-text{
-				z-index:10;
-				position: absolute;
-				height: 50%;
-				bottom: 0px;
+				
+				    display: flex;
+				    align-items: flex-end;
+				    justify-content: flex-start;
+				    height: 80%;
 				h2{
-					@include font($Sams,2.25rem,500,$white);
-					width: 60%;
-					padding-left: 107px;
-					margin:0px 0px 24px;
-				}
-				p{
-					margin:0px;
-					@include font($Sams,1.75rem,400,$white);
-					width: 60%;
-					padding-left: 107px;
-				}
+
+					z-index: 10;
+				 	@include font($Sams,2.25rem,500,$white);
+					width: 70%;
+					padding-left: 80px;
+				 	margin: 80% 0px 0px 10px;
+					
+				 }
+				
 			}
 			
 		}

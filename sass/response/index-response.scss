@@ -1,0 +1,115 @@
+.index{
+	padding: 0px;
+	.index-slider{
+		margin-top: 25px;
+		.item{
+
+			.index-slider-text{
+				
+				h2{
+					
+					@include breakpoint(max-width 800px){
+						width: 90%;
+						margin:50% auto 0px auto;
+						padding-left: 0px;
+						@include breakpoint(max-width 600px){
+							text-align: center;
+						}
+					}
+				}
+				
+			}
+			
+		}
+	}
+
+	.container{
+		.index-list{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin:50px 0px 0px;
+			@include breakpoint(max-width 1000px){
+						margin:25px 0px 0px;
+						@include breakpoint(max-width 800px){
+							justify-content: space-around;
+						}
+					}
+				.index-item{
+					width: 49%;
+					margin-bottom: 24px;
+					position: relative;
+					@include breakpoint(max-width 1000px){
+						width: 49%;
+						
+					}
+					&.one-to-one{
+						width: 100%;
+						.index-img{
+							height:450px;
+						}
+						@include breakpoint(max-width 800px){
+								width: 96%;
+						}
+					}
+	
+					&.one-to-two{
+						width: 49%;
+						.index-img{
+							height:350px;
+						}
+						@include breakpoint(max-width 1000px){
+							width: 48.5%;
+							.index-img{
+								height:350px;
+							}
+							@include breakpoint(max-width 800px){
+								width: 46%;
+								@include breakpoint(max-width 600px){
+										width: 96%;
+								}
+							}
+						}
+					}
+					&.one-to-three{
+						width: 32%;
+						.index-img{
+							height:300px;
+						}
+						@include breakpoint(max-width 1000px){
+							width: 48.5%;
+							.index-img{
+								height:350px;
+							}
+							@include breakpoint(max-width 800px){
+								width: 46%;
+								@include breakpoint(max-width 600px){
+										width: 96%;
+								}
+							}
+						}
+					}
+					&.two-to-three{
+						width: 65%;
+						.index-img{
+							height:400px;
+						}
+						@include breakpoint(max-width 1000px){
+							width: 48.5%;
+							.index-img{
+								height:350px;
+							}
+							@include breakpoint(max-width 800px){
+								width: 46%;
+								@include breakpoint(max-width 600px){
+										width: 96%;
+								}
+							}
+						}
+					}
+
+				}
+
+		}
+	}	
+}	
