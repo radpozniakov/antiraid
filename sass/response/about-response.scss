@@ -1,0 +1,79 @@
+/*  ====================    ABOUT US   ====================*/
+main.container-fluid.about{
+	h2{
+			
+	}
+	.our-help{
+
+		p{
+			@include breakpoint(max-width 1000px){
+				width: 80%;
+			}
+		}
+	}
+	.our-comand{
+		
+		ul{
+			
+			@include breakpoint(max-width 1000px){
+				width: 90%;
+				@include breakpoint(max-width 650px){
+					justify-content: center;
+					@include breakpoint(max-width 600px){
+						justify-content: space-around;
+					}
+				}
+			}
+			
+			
+			li{
+				@include breakpoint(max-width 650px){
+					width: 35%;
+					@include breakpoint(max-width 650px){
+						width: 80%;
+					}
+				}
+				.logo{
+					img{
+						
+					}
+				}
+				
+				
+			}
+
+		}
+	}
+	.our-sponsors{
+
+		
+		.sponsors-carousel{
+			
+		
+			
+			.owl-stage{
+				
+				.item{
+				
+					@include breakpoint(max-width 750px){
+						width:250px;
+						@include breakpoint(max-width 660px){
+							width:200px;
+							@include breakpoint(max-width 540px){
+								width:190px;
+								@include breakpoint(max-width 520px){
+									width:300px;
+									margin:0px auto;
+								}	
+							}	
+						}	
+					}		
+
+				}
+			}
+		}	
+	}
+
+
+
+}

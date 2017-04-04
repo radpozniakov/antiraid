@@ -1,0 +1,30 @@
+.photo-albums-list{
+
+	  .photo-album-item{
+		
+		@include breakpoint(max-width 1000px){
+				width: 48.5%;
+				@include breakpoint(max-width 550px){
+					width: 100%;
+				}
+			}
+		&>a{
+
+
+		}
+	  	.logo{
+	  		
+
+			.filter{
+
+				p{
+					
+				}
+
+			}
+	  	}
+	  	p{
+	  		
+	  	}
+	  }
+}

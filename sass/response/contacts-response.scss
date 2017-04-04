@@ -1,0 +1,70 @@
+/*  ====================    CONTACTS    ====================*/
+
+main.container-fluid.contacts{
+	
+	@include breakpoint(max-width 768px){
+
+		.main-content{
+			
+
+
+			h3{
+				text-align: center;
+			}
+			.info{	
+				margin-bottom: 25px;
+					display: flex;
+					justify-content: space-around;
+					@include breakpoint(max-width 510px){
+							 justify-content: space-between;
+							 p:first-of-type{
+							 	margin-left:auto;
+							 }
+						}
+					p{
+						@include breakpoint(max-width 510px){
+							 width: 45%;
+						}
+					    margin: 0px;
+					    padding: 0px;
+					   
+					    display: inline-block;
+
+					}
+				}
+			.about-us>p{
+				width: 90%;
+				text-align: center;
+				margin:25px auto;
+				
+			}
+		
+			
+				
+			form .form-group{
+				padding: 0px 50px;
+
+				label{
+					text-align: center;
+				}
+				input,textarea{
+					
+				}
+				input{
+					
+				}
+				textarea{
+				
+				}
+			
+				
+			}	
+			button{
+					margin:0px auto;
+					display: block;
+			}
+		}
+	}
+
+
+}
