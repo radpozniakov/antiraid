@@ -39,7 +39,7 @@ footer{
 					line-height: 27px;
 					border:2px solid $red;
 					border-radius: 50%;
-					margin-left: 10px;
+					// margin-left: 10px;
 					a i{
 						color:$white;
 						font-size:0.98125rem;
@@ -57,6 +57,10 @@ footer{
 				i{
 					color:$red;
 					margin-right: 5px;
+				}
+				a{
+					text-decoration: none;
+					color:$white;
 				}
 			}
 		}

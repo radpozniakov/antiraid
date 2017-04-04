@@ -1,0 +1,54 @@
+
+
+footer{
+
+	.top-footer{
+
+		@include breakpoint(max-width 680px) {
+		    flex-direction: column;
+		    padding-bottom: 12px;
+		    .about-us{
+				width: 80%;
+				text-align: center;
+				@include breakpoint(max-width 400px) {
+					width: 92%;
+				}
+		    }
+		    .meta-foot{
+		    	margin:0px auto;
+		    	ul{
+		    		justify-content: center;
+		    		li{
+					width: 48px;
+					height: 48px;
+					margin-left:0px;
+					line-height: 46px;
+						&:not(:first-child){
+							margin-left: 30px;
+						}
+						&:first-child{
+							margin-left: 0px;
+						}
+					}
+
+		    	}
+		    	p{
+		    		text-align: center;
+		    	}
+		    }
+
+		}
+	
+	
+	}
+	.navigation-bottom{
+		@include breakpoint(max-width 680px) {
+			display: none;
+		}
+	}
+	.from{
+		@include breakpoint(max-width 680px) {
+			margin-top:25px;
+		}
+	}
+}
