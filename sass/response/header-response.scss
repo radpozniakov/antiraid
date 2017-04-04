@@ -1,0 +1,234 @@
+@include breakpoint(max-width 1200px){
+  header{
+    .top-head .container{
+      .logo-group{
+        width: 40%;
+      }
+      .head-contacts{
+        ul{
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+    .tag-links{
+      ul{
+        li{
+          &:last-child{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(max-width 990px){
+  header{
+    .top-head .container{
+      .logo-group{
+        justify-content: flex-start;
+        width: 50%;
+        .logo{
+          margin-right: 20px;
+          width: 80px;
+          height: 80px;
+        }
+        .logo-info{
+          .logo-title{
+            font-size: 1.5rem;
+          }
+          .logo-description{
+            font-size: 1rem;
+            margin: 0px;
+          }
+        }
+      }
+      .head-contacts{
+        margin: 0px 30px;
+        ul{
+          display: block;
+          text-align: center;
+        }
+      }
+      .head-button{
+        width: 27.94%;
+        a{
+          padding: 6px 40px;
+          b{
+            font-weight:400;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(max-width 800px){
+  header .bottom-head .container{
+    padding-left: 3%;
+    padding-right: 3%;
+    form.search{
+      width: 100%;
+    }
+    .tag-links{
+      display: none;
+    }
+  }
+}
+
+
+@include breakpoint(max-width 768px) {
+  header{
+    .top-head .container{
+      padding-left: 2%;
+      padding-right: 2%;
+
+      .logo-group{
+        justify-content: flex-start;
+        width: 75%;
+        .logo{
+          width: 80px;
+          height: 80px;
+          margin-right:20px;
+        }
+        .logo-info{
+          .logo-title{
+            font-size: 1.5rem;
+          }
+          .logo-description{
+            font-size: 1rem;
+            margin: 0px;
+          }
+        }
+      }
+      .head-contacts{
+        width: 50%;
+        ul{
+          display: block;
+          text-align: right;
+        }
+      }
+
+      .head-button{
+        display: none;
+      }
+
+
+    }
+    .navigation-top {
+      height: 70px;
+      ul{
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        background-color: $main_black;
+        left: -300px;
+        top: 0px;
+        display: block;
+        li{
+          display: block;
+          padding: 15px 15px;
+          a{
+            font-weight: 300;
+            border-bottom: s;
+
+          }
+          &.active{
+            border-bottom: 2px solid $red;
+            color:$red;
+            a{
+              color:$red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(max-width 580px){
+  header{
+    .top-head .container{
+      padding-left: 2%;
+      padding-right: 2%;
+      display: block;
+      .logo-group{
+        width: 100%;
+        display: block;
+        .logo{
+          width: 80px;
+          height: 80px;
+          margin: 0px auto;
+        }
+        .logo-info{
+          text-align: center;
+          width: 100%;
+          .logo-title{
+            font-size: 1.5rem;
+            padding-top: 10px;
+          }
+          .logo-description{
+            font-size: 1rem;
+            margin: 0px;
+          }
+        }
+      }
+      .head-contacts{
+        margin: 15px 0px 0px;
+        width: 100%;
+        ul{
+          margin: 0px;
+          text-align: center;
+          li{
+            display: inline-block;
+            &:first-of-type{
+              margin-right:15px;
+            }
+            p{
+              padding: 0px 0px;
+              margin: 5px;
+            }
+          }
+        }
+      }
+
+      .head-button{
+        display: none;
+      }
+    }
+    .navigation-top {
+      height: 70px;
+      ul{
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        background-color: $main_black;
+        left: -300px;
+        top: 0px;
+        display: block;
+        li{
+          display: block;
+          padding: 15px 15px;
+          a{
+            font-weight: 300;
+            border-bottom: s;
+
+          }
+          &.active{
+            border-bottom: 2px solid $red;
+            color:$red;
+            a{
+              color:$red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+}
+
+

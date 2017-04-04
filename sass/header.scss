@@ -98,6 +98,10 @@ header{
 					p{
 						@include font($Sams,1.125rem,400,$main_black);
 					}
+					a{
+						@include font($Sams,1.125rem,400,$main_black);
+						text-decoration: none;
+					}
 				}
 
 			}
@@ -178,18 +182,20 @@ header{
 		}
 		.search{
 			margin-left: auto;
+			display: flex;
 			input{
+				flex: 1;
 				position: relative;
-				width: 298px;
 				padding: 8px 0px 9px 10px;
 				border:1px solid $grey;
+				appearance: none;
+				border-radius:0;
+
 				outline: none;
-				border-right: none;
 				@include font($Sams,1rem,300,$main_black);
 			}
 			.search::-webkit-input-placeholder {
   				@include font($Sams,0.9375rem,300,$dark_grey);
-
 			}
 			.search::-moz-input-placeholder {
 			 	@include font($Sams,0.9375rem,300,$dark_grey);
@@ -197,20 +203,11 @@ header{
 			.search::-ms-input-placeholder {
 				@include font($Sams,0.9375rem,300,$dark_grey);
 			 }
-			 span{
-			 	margin-left: -5px;
-			 	/*padding: 3px 0px 5px 0px;*/
-			 	button{
-			 		height: 37px;
-			 		width: 37px;
-			 		padding: 9px 0px 27px;
-			 		background-color: $red;
-			 		color:white;
-			 		border:1px solid $grey;
-			 		border-left: none;
-			 		outline: none;
-			 	}
-			 }
+			button{
+				border: none;
+				background-color: $red;
+				color: $white;
+			}
 		}
 	}
 }
