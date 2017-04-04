@@ -7,10 +7,15 @@
 		.content{
 			border-top:3px solid $red;
 			padding: 14px 20px 30px;
-			p{
-				margin:17px 0px 50px;
-				@include font($Sams, 1rem, 400, $main_black);
-				line-height: 1.625rem;
+			a{
+				p{
+					margin:17px 0px 50px;
+					@include font($Sams, 1rem, 400, $main_black);
+					line-height: 1.625rem;
+					
+				}
+				text-decoration: none;
+
 			}
 			h2{
 				margin-top:20px;
@@ -24,5 +29,9 @@
 			background-size: cover;
 		}
 	}
-	
+	.a-more{ a{
+
+		margin-top:200px;
+		}
+	}
 }
