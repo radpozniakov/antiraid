@@ -32,7 +32,8 @@
 
 
 .single-news-tags{
-  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 15px;
 }
 
 ul.share-social{
@@ -57,4 +58,90 @@ ul.share-social{
       color: #1F9FF8;
     }
   }
+}
+
+.author-news {
+  border-top: solid 1px $lightGrey;
+  border-bottom: solid 1px $lightGrey;
+  padding: 15px 0px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  img{
+    width: 90px;
+    border-radius: 50%;
+    float: left;
+    margin-right:15px;
+  }
+  p{
+    margin: 0px;
+    &:first-of-type{
+      padding-top:17px;
+    }
+  }
+  .name-author{
+    @include font($Sams,1.125rem, 400, $main_black);
+  }
+  .email-author{
+    @include font($Sams,1rem, 400, $grey);
+  }
+}
+
+
+.recent-news-wrap{
+  padding: 24px 0px;
+  background:  $lightGrey;
+}
+
+.recent-news-parent{
+  display: flex;
+  justify-content: center;
+}
+
+.recent-news-item{
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0px 12px;
+  width: 30%;
+  border: solid 1px $lightGrey;
+  background-color: $white;
+  a{
+    text-decoration: none;
+    &:hover h4{
+      color: $red;
+    }
+  }
+  .text-description{
+    padding: 0px 20px;
+    p{
+      padding-top: 5px;
+      span{
+        @include font($Sams, 0.9rem, 400, $grey);
+      }
+    }
+    p.description{
+      @include font($Sams, 1rem, 400, $main_black);
+      line-height: 1.5rem;
+    }
+    h4{
+      @include font($Sams, 1.5rem, 400, $main_black);
+      margin: 0px;
+    }
+  }
+  .tags{
+    padding: 0px 20px;
+    a{
+      text-decoration: none;
+      @include font($Sams, 0.88rem, 300, $grey);
+      margin-right: 8px;
+      &:hover{
+        color: $red;
+      }
+    }
+  }
+}
+.thumnail-recent-item{
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+
 }
