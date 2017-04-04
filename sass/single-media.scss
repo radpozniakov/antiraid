@@ -1,0 +1,25 @@
+.info-block{
+	padding: 34px 0px;
+	
+	margin-bottom: 24px;
+	p{
+		width:75%;
+		@include font($Serif, 1rem, 400, $main_black);
+		line-height: 1.6875rem;
+		margin:0px auto;
+	}
+}
+.album-list{
+	display:flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	.album-item{
+		width: 32%;
+		margin-bottom: 24px;
+		img{
+			width: 100%;
+			border: 18px solid $white;
+		}
+	}
+
+}
