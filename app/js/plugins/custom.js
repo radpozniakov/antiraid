@@ -25,4 +25,33 @@
         $('.stop').on('click',function(){
             owl.trigger('stop.owl.autoplay')
         })
+        //////////////////////////////////////////////////////////////
+        var owl_index = $('#index-carousel');
+        $('#index-carousel').owlCarousel({
+        loop:true,
+        autoplay:true,
+        dots:false,
+        autoplayTimeout:6000,
+        responsiveClass:true,
+        margin:0,
+        smartSpeed:1000,
+        autoplayHoverPause:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:1
+                    },
+                    1000:{
+                        items:1
+                    }
+                }
+            });
+        $('.play').on('click',function(){
+            owl_index.trigger('play.owl_index.autoplay',[6000])
+        })
+        $('.stop').on('click',function(){
+            owl_index.trigger('stop.owl_index.autoplay')
+        })
     });

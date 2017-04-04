@@ -1,0 +1,122 @@
+.index{
+	padding: 0px;
+	.index-slider{
+		margin-top: 25px;
+		.item{
+			position:relative;
+			height:500px;
+			background-image: url(../img/title.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			.dark{
+				position: absolute;
+				height: 100%;
+				width:100%;
+				background-color: rgba(0,0,0,.35);
+				z-index: 5;
+			}
+			.index-slider-text{
+				z-index:10;
+				position: absolute;
+				height: 50%;
+				bottom: 0px;
+				h2{
+					@include font($Sams,2.25rem,500,$white);
+					width: 60%;
+					padding-left: 107px;
+					margin:0px 0px 24px;
+				}
+				p{
+					margin:0px;
+					@include font($Sams,1.75rem,400,$white);
+					width: 60%;
+					padding-left: 107px;
+				}
+			}
+			
+		}
+	}
+
+	.container{
+		.index-list{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			margin:50px 0px 0px;
+				.index-item{
+					width: 49%;
+					margin-bottom: 24px;
+					position: relative;
+					&.one-to-one{
+						width: 100%;
+						.index-img{
+							height:450px;
+						}
+					}
+					&>a{
+
+					    z-index: 1000;
+					    text-indent: 200%;
+					    white-space: nowrap;
+					    font-size: 0;
+					    background: rgba(255,255,255,0);
+					    position: absolute;
+					    top: 0;
+					    left: 0;
+					    width: 100%;
+					    height: 100%;
+					    display: block;
+
+					}
+					&:hover {
+						.index-img{
+							border-color: $red;
+						}
+						.index-content h2{
+							color:$red;
+						}
+						
+					}
+					&.one-to-two{
+						width: 49%;
+						.index-img{
+							height:350px;
+						}
+					}
+					&.one-to-three{
+						width: 33%;
+						.index-img{
+							height:300px;
+						}
+					}
+					&.two-to-three{
+						width: 65%;
+						.index-img{
+							height:400px;
+						}
+					}
+					.index-img{
+						background-image: url(../img/omon3.jpg);
+						
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						border-bottom: 3px solid $red;
+					}
+				}
+				.index-content{
+					padding: 17px 13px 29px 20px;
+					h2{
+						@include font($Sams, 1.5rem, 500, $main_black);
+					}
+					p{
+						margin:17px 0px 50px;
+						@include font($Sams, 1rem, 400, $main_black);
+						line-height: 1.625rem;
+							
+					}
+				}
+		}
+	}	
+}	
