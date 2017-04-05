@@ -125,36 +125,63 @@
   border-radius: 5px;
   max-width: 600px;
   width: 60%;
+  @include breakpoint(max-width 500px){
+	 width: 95%!important;
+	 
+  }
   margin: 0 auto;
   padding: 15px 20px;
+  @include breakpoint(max-width 600px){
+	 padding: 5px;
+	 max-width: none;
+  }
   h3{
     @include font($Sams, 1.6rem, 400, $main_black);
     text-align: center;
     margin-bottom: 0px;
+    @include breakpoint(max-width 600px){
+		 font-size:1.2rem;
+		 margin-top:30px;
+	  }
   }
   p{
     @include font($Sams, 1rem, 400, $dark_grey);
     text-align: center;
     line-height: 1.5rem;
+    @include breakpoint(max-width 600px){
+		display:none;
+    }
   }
   hr{
     color: red;
     border: solid 1px $red;
     width: 30%;
     margin-top: 35px;
+      @include breakpoint(max-width 500px){
+		display: none;
+	  }
   }
   form{
     width: 70%;
     margin: 30px auto 10px;
-
+	@include breakpoint(max-width 500px){
+		 margin: 10px auto 10px;
+	  }
     .form-group{
       margin: 15px 0px 25px;
+       @include breakpoint(max-width 500px){
+		margin: 5px 0px 10px;
+	  }
     }
     label{
       display: block;
       @include font($Sams, 1rem, 400, $dark_grey);
       padding-bottom: 10px;
       cursor: pointer;
+      @include breakpoint(max-width 500px){
+		 text-align: center;
+		 
+	  }
     }
     input{
       width: 100%;
@@ -174,6 +201,9 @@
       border: none;
       background-color: $lightGrey;
       line-height: 1.4rem;
+      @include breakpoint(max-width 500px){
+		 height:150px;
+	  }
        &.error{
       	border:1px solid $red;
       }
@@ -184,6 +214,10 @@
       background: #fff;
       border: 2px solid $red;
       @include font($Sams, 1rem, 400, $red);
+      @include breakpoint(max-width 500px){
+		 margin-top:5px!important;
+		  margin-bottom:5px!important;
+	  }
       transition-duration: 200ms;
       &:hover{
         background-color:$red;
@@ -198,6 +232,10 @@
       text-transform: uppercase;
       padding: 10px 33px 11px;
       background: #fff;
+		@include breakpoint(max-width 500px){
+		 margin-top:5px!important;
+		  margin-bottom:5px!important;
+	  }
       border: 2px solid $dark_grey;
       @include font($Sams, 1rem, 400, $dark_grey);
       transition-duration: 200ms;
