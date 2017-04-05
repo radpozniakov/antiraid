@@ -64,6 +64,9 @@ main.container-fluid.about{
 								@include breakpoint(max-width 520px){
 									width:300px;
 									margin:0px auto;
+									@include breakpoint(max-width 520px){
+										width:220px;
+									}	
 								}	
 							}	
 						}	

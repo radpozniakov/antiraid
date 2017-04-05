@@ -15,15 +15,26 @@ main.container-fluid.contacts{
 				margin-bottom: 25px;
 					display: flex;
 					justify-content: space-around;
+					@include breakpoint(max-width 400px){
+								 flex-direction: column;
+								 
+							}
 					@include breakpoint(max-width 510px){
 							 justify-content: space-between;
 							 p:first-of-type{
 							 	margin-left:auto;
+							 	@include breakpoint(max-width 400px){
+									 margin-bottom:24px;
+								}
 							 }
 						}
 					p{
 						@include breakpoint(max-width 510px){
 							 width: 45%;
+							 @include breakpoint(max-width 400px){
+								 width: 100%;
+								 text-align: center;
+							}
 						}
 					    margin: 0px;
 					    padding: 0px;

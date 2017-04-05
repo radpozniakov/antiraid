@@ -1,6 +1,9 @@
 
 .news-list{
 	margin-bottom: 24px;
+	@include breakpoint(max-width 580px){
+					margin-bottom: 0px;
+		}
 	display: flex;
 	flex-direction: column;
 		
