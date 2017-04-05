@@ -11,8 +11,7 @@
         <link rel="stylesheet" href="css/bootstrap-grid.css">
          <link rel="stylesheet" href="css/custom.css">
          <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-         <link rel="stylesheet" href="style/owl.carousel.min.css">
-        <link rel="stylesheet" href="style/owl.theme.default.min.css">
+        
         <script defer src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script defer src="https://use.fontawesome.com/c873fc24b7.js"></script>
     </head>
@@ -124,22 +123,23 @@
                             
                         </div>
                         <div class="col-sm-offset-1 col-sm-6 form">
-                            <form>
+                            <form id='form-contact' action="#">
                                 <div class="row">
                                       <div class="form-group col-sm-6">
                                         <label for="contact-name">Имя</label>
-                                        <input type="text" class="form-control" id="contact-name" >
+                                        <input type="text" class="  form-control" id="contact-name" name="contact-name">
                                       </div>
                                       <div class="form-group col-sm-6">
                                         <label for="contact-email">Email</label>
-                                        <input type="email" class="form-control" id="contact-email" >
+                                        <input type="email" class=" form-control" id="contact-email" name="contact-email">
                                       </div>
                                   </div>
                                   <div class="form-group">
-                                    <label for="exampleInputEmail1">Текст сообщения</label>
-                                    <textarea class="form-control" rows="5"></textarea>
+                                    <label for="contact-area">Текст сообщения</label>
+                                    <textarea class="form-control " rows="5" id="contact-area" name="contact-area"></textarea>
                                   </div>
-                                  <button type="submit" class="btn btn-default">отправить</button>
+                                  <p class="notification error">Вы большой молодец, возмите пирожок</p>
+                                  <button type="submit" class="btn btn-default" id='contact-buttom'>отправить</button>
                             </form>
                         </div>
                     </div>
@@ -194,5 +194,6 @@
         </footer>
         <script defer src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
         <script>window.jQuery || document.write('<script defer src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+        <script defer src="js/plugins/contact-form.js"></script>
     </body>
 </html>

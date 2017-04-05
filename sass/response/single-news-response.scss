@@ -1,0 +1,186 @@
+h1{
+
+}
+.single-new{
+
+}
+.thumbnail-news{
+   
+
+ @include breakpoint(max-width 1000px){
+      height: 400px;
+      z-index:0;
+      @include breakpoint(max-width 800px){
+        height: 350px;
+        @include breakpoint(max-width 500px){
+          height: 300px;       
+          @include breakpoint(max-width 400px){
+            height: 250px;   
+            background-size: contain;     
+          } 
+        }
+      }
+    }
+}
+.meta-info{
+  
+  span{
+  
+  }
+}
+.single-news-title{
+ @include breakpoint(max-width 1000px){
+      font-size:1.75rem;
+      @include breakpoint(max-width 500px){
+          font-size:1.5rem;
+      }
+  }
+}
+.single-news-content{
+   @include breakpoint(max-width 1000px){
+      width: 90%;
+      @include breakpoint(max-width 500px){
+         width: 96%;
+      }
+  }
+  .content-single h2{
+   
+  }
+  .content-single h3{
+
+  }
+  .content-single h4{
+
+  }
+  .content-single h5{
+  
+  }
+  .content-single blockquote{
+ 
+   @include breakpoint(max-width 1000px){
+     margin: 40px;
+      @include breakpoint(max-width 500px){
+         margin: 20px;
+      }
+  }
+
+  }
+  p{
+   
+  }
+  a{
+ 
+  }
+  img{
+   
+   }
+}
+
+
+.single-news-tags .col-sm-6:first-child{
+      @include breakpoint(max-width 770px){
+        text-align: center;
+        margin-bottom:20px;
+        padding-bottom:30px;
+        border-bottom:1px solid $lightGrey;
+      }
+}
+
+ul.share-social{
+ @include breakpoint(max-width 770px){
+text-align: center;
+}
+  li{
+    @include breakpoint(max-width 770px){
+      font-size: 2rem;
+       &:not(:first-child){
+          margin-left:50px;
+            }
+       @include breakpoint(max-width 500px){
+          margin-left:0px;
+          font-size: 3rem;
+         &:not(:first-child){
+          margin-left:40px;
+            }
+      }
+    }
+   
+    .fa-vk{
+    
+    }
+    .fa-facebook{
+      
+    }
+    .fa-twitter{
+      
+    }
+  }
+}
+
+.author-news {
+ 
+  img{
+   
+  }
+  p{
+   
+    &:first-of-type{
+     
+    }
+  }
+  .name-author{
+   
+  }
+  .email-author{
+    
+  }
+}
+
+
+.recent-news-wrap{
+  
+}
+
+.recent-news-parent{
+  
+}
+
+.recent-news-item{
+  @include breakpoint(max-width 1050px){
+      &:not(:nth-child(3)){
+        width:46%;
+        margin-bottom:25px;
+        @include breakpoint(max-width 700px){
+          width:95%;
+        }
+      }
+      &:nth-child(3){
+        width:95%;
+      }
+  }  
+  a{
+   
+  }
+  .text-description{
+   
+    p{
+     
+    }
+    p.description{
+    
+    }
+    h4{
+      
+    }
+  }
+  .tags{
+   
+    a{
+     
+    }
+  }
+}
+.thumnail-recent-item{
+
+}
+
