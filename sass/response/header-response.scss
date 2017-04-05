@@ -145,6 +145,27 @@
       }
     }
   }
+  .hamburger-menu{
+    display: inline-block;
+    cursor: pointer;
+    line-height: 70px;
+    @include font($Sams, 1.5rem, 300, $white);
+  }
+
+  .help-button{
+    display: block;
+    float: right;
+    height: 70px;
+    a{
+      line-height: 70px;
+      background-color: $red;
+      padding: 13px 11px;
+      letter-spacing: 1px;
+      border-radius: 2px;
+      @include font($Sams, 1.1rem, 300, $white);
+    }
+  }
+
 }
 
 @include breakpoint(max-width 580px){

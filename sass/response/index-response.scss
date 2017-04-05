@@ -112,4 +112,26 @@
 
 		}
 	}	
-}	
+}
+
+@include breakpoint(max-width 840px){
+  #modal-form{
+    width: 80%;
+  }
+}
+
+@include breakpoint(max-width 630px){
+  #modal-form{
+    width: 85%;
+    form{
+      width: 95%;
+    }
+   .button-group{
+     flex-wrap: wrap;
+     button{
+       width: 100%;
+       margin: 10px 0px;
+     }
+   }
+  }
+}
