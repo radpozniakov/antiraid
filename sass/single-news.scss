@@ -21,9 +21,45 @@
  padding-top: 10px;
   width: 80%;
   margin: auto;
+  .content-single h2{
+    @include font($Sams, 1.85rem, 500, $main_black);
+    margin-bottom: -10px;
+  }
+  .content-single h3{
+    @include font($Sams, 1.55rem, 500, $main_black);
+    margin-bottom: -10px;
+  }
+  .content-single h4{
+    @include font($Sams, 1.25rem, 500, $main_black);
+    margin-bottom: -10px;
+  }
+  .content-single h5{
+    @include font($Sams, 1rem, 600, $main_black);
+    margin-bottom: -10px;
+    text-transform: uppercase;
+  }
+  .content-single blockquote{
+    margin: 50px;
+    border-left: solid 4px $grey;
+    padding-left: 15px;
+    p{
+      @include font($Sams, 1rem, 500, $main_black);
+      small{
+        @include font($Serif, 1rem, 400, $dark_grey);
+      }
+    }
+
+  }
   p{
-    @include font($Serif, 1.125rem, 400, $main_black);
-    line-height: 1.75rem;
+    @include font($Serif, 1.125rem, 400, darken($dark_grey, 10%));
+    line-height: 1.8rem;
+  }
+  a{
+    color: $red;
+    &:hover{
+      color: darken($red, 10%);
+      text-decoration: underline;
+    }
   }
   img{
     max-width: 100%;
@@ -143,5 +179,5 @@ ul.share-social{
   height: 200px;
   background-size: cover;
   background-position: center;
-
 }
+
