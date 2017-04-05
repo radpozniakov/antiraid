@@ -1,0 +1,56 @@
+.not-found{
+	.container .not-found-content{
+		margin-bottom: 25px;
+		padding: 30px 0px 0px;
+		h2{
+			margin-bottom: 32px;
+			@include font($Sams,2rem,400,$main_black);
+			text-align: center;
+		}
+		p{
+			width: 37%;
+			@include breakpoint(max-width 800px){
+				width: 80%;
+			}
+			margin: 0px auto 26px;
+			@include breakpoint(max-width 700px){
+					margin: 0px auto 12px;
+				
+				}
+			text-align: center;
+			@include font($Sams,1rem,400,$main_black);
+			line-height: 24px;
+
+		}
+		.img{
+			background-image: url(../img/404.jpg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			width:50%;
+			@include breakpoint(max-width 1000px){
+				width:80%;
+				@include breakpoint(max-width 700px){
+					width:90%;
+				
+				}
+			}
+			height:380px;
+			@include breakpoint(max-width 1000px){
+				height:300px;
+				@include breakpoint(max-width 700px){
+					height:300px;
+					@include breakpoint(max-width 500px){
+						height:200px;
+					}
+				}
+			}
+			margin:0px auto;
+		}
+		.a-more{
+			@include breakpoint(max-width 700px){
+				margin-top:0px;
+			}
+		}
+	}
+}	
