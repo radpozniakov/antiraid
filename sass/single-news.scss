@@ -38,6 +38,19 @@
     margin-bottom: -10px;
     text-transform: uppercase;
   }
+  .content-single ul{
+    margin:30px 0px;
+    padding-left: 20px;
+     @include font($Sams, 1.1rem, 400, $dark_grey);
+  }
+  .content-single ol{
+    margin:30px 0px;
+      padding-left: 20px;
+       @include font($Sams, 1.1rem, 400, $dark_grey);
+  }
+  .content-single li{
+    margin:10px 0px;
+  }
   .content-single blockquote{
     margin: 50px;
     border-left: solid 4px $grey;
@@ -122,7 +135,10 @@ ul.share-social{
   }
 }
 
+hr{
+  border-top:1px solid $lightGrey;
 
+}
 .recent-news-wrap{
   padding: 24px 0px;
   background:  $lightGrey;
@@ -131,6 +147,7 @@ ul.share-social{
 .recent-news-parent{
   display: flex;
   justify-content: center;
+  flex-wrap:wrap;
 }
 
 .recent-news-item{

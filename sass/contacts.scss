@@ -38,6 +38,9 @@ main.container-fluid.contacts{
 				background: $lightGrey;
 				border:none;
 				padding: 14px 0px 14px 10px;
+				&.error{
+					border:1px solid $red;
+				}
 			}
 			input{
 				margin-bottom: 22px;
@@ -47,12 +50,27 @@ main.container-fluid.contacts{
 				resize: none;
 				
 			}
+
 		}
+		p.notification{
+				margin: 0px 0px 25px 0px;
+				@include font($Sams,1rem,400,$main_black);
+				padding:15px 0px 15px 10px;
+				display: none;
+				&.error{
+					background: #FFC095;
+					color:$red;
+				}
+				&.success{
+					background:#DEFFB8;
+					color:#417505;
+				}
+			}
 		button{
 				text-transform: uppercase;
 				padding: 10px 33px 11px;
 				background: $white;
-				
+				resize: none;
 				transition-duration: 200ms;
 				border:2px solid $red;
 				@include font($Sams,1.125rem,400,$red);
