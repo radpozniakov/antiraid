@@ -15,7 +15,7 @@ main.container-fluid.contacts{
 				margin-bottom: 25px;
 					display: flex;
 					 p:first-of-type a{
-					 	color:$main_black;
+					 	color:$dark_grey;
 					 }
 					justify-content: space-around;
 					@include breakpoint(max-width 400px){
