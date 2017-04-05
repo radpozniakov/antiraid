@@ -162,6 +162,9 @@
       @include font($Sams, 1rem, 400, $main_black);
       border: none;
       background-color: $lightGrey;
+      &.error{
+      	border:1px solid $red;
+      }
     }
     textarea{
       width: 100%;
@@ -171,6 +174,9 @@
       border: none;
       background-color: $lightGrey;
       line-height: 1.4rem;
+       &.error{
+      	border:1px solid $red;
+      }
     }
     .submit-modal-group{
       text-transform: uppercase;

@@ -1,10 +1,11 @@
 .not-found{
 	.container .not-found-content{
+	
 		margin-bottom: 25px;
 		padding: 30px 0px 0px;
 		h2{
 			margin-bottom: 32px;
-			@include font($Sams,2rem,400,$main_black);
+			@include font($Sams,1.75rem,300,$main_black);
 			text-align: center;
 		}
 		p{

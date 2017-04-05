@@ -14,6 +14,9 @@ main.container-fluid.contacts{
 			.info{	
 				margin-bottom: 25px;
 					display: flex;
+					 p:first-of-type a{
+					 	color:$main_black;
+					 }
 					justify-content: space-around;
 					@include breakpoint(max-width 400px){
 								 flex-direction: column;
