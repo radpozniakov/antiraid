@@ -6,6 +6,14 @@
 .uppercase{
 	text-transform: uppercase;
 }
+
+input,textarea,a,button{
+	outline: none;
+}
+input,textarea{
+	appearance: none;
+	border-radius:0;
+}
 /*  ====================    TAG A "MORE"    ====================*/
 
 .a-more{

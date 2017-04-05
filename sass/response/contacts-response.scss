@@ -52,12 +52,9 @@ main.container-fluid.contacts{
 		
 			
 				
-			form .form-group{
+			form .row .form-group{
 				padding: 0px 50px;
 
-				label{
-					text-align: center;
-				}
 				input,textarea{
 					
 				}
@@ -67,9 +64,12 @@ main.container-fluid.contacts{
 				textarea{
 				
 				}
-			
-				
-			}	
+
+			}
+
+			.form-group{
+				padding: 0 36px;
+			}
 			button{
 					margin:0px auto;
 					display: block;
