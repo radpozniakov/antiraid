@@ -36,6 +36,21 @@
   	}
   	
 }
+/*  ====================    ALERT FOR MODAL-FORM    ====================*/
+p.modal_notification{
+				margin: 25px;
+				@include font($Sams,1rem,400,$main_black);
+				padding:15px 0px 15px 10px;
+				display: none;
+				&.error{
+					background: #FFC095;
+					color:$red;
+				}
+				&.success{
+					background:#DEFFB8;
+					color:#417505;
+				}
+			}
 /*  ====================    TITLE FOR PAGE    ====================*/
 a{	
 	text-decoration: none;

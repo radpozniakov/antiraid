@@ -42,7 +42,7 @@
      $('#index-carousel').owlCarousel({
        loop:true,
        autoplay:true,
-       dots:false,
+       dots:true,
        autoplayTimeout:6000,
        responsiveClass:true,
        margin:0,

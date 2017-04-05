@@ -116,8 +116,9 @@
     <div id="modal-form" class="modal-form white-popup-block mfp-hide">
         <h3>Сообщить про захват</h3>
         <p>Опищите вашу ситуацию, мы обязательно свяжемся с вами, проконсультируем и поможем</p>
+
         <hr>
-        <form action="">
+        <form action="" id="modal-form">
             <div class="form-group">
                 <label for="modal-email">Email</label>
                 <input id="modal-email" name="modal-email" type="email">
@@ -127,11 +128,12 @@
                 <label for="modal-text">Текст сообщения</label>
                 <textarea name="modal-text" id="modal-text" rows="7"></textarea>
             </div>
-
+             <p class="modal_notification success">fsadfsdfdf</p>
             <div class="button-group">
                 <button class="submit-modal-group"  title="Отправить" type="submit">Отправить</button>
                 <button class="close-modal-group" title="Закрыть" type="reset">Закрыть</button>
             </div>
+           
         </form>
     </div>
 
@@ -170,7 +172,7 @@
                                     <label for="contact-area">Текст сообщения</label>
                                     <textarea class="form-control " rows="5" id="contact-area" name="contact-area"></textarea>
                                   </div>
-                                  <p class="notification error">Вы большой молодец, возмите пирожок</p>
+                                  <p class="notification"></p>
                                   <button type="submit" class="btn btn-default" id='contact-buttom'>отправить</button>
                             </form>
                         </div>
@@ -230,5 +232,6 @@
     <script defer src='js/custom.js'></script>
 
         <script defer src="js/plugins/contact-form.js"></script>
+         <script defer src="js/plugins/modal-form.js"></script>
     </body>
 </html>
