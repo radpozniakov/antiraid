@@ -21,22 +21,25 @@
 		    display: block;
 
 		}
+		&>a:hover{
+					background:rgba(255,255,255,.2);
+				}
 	  	.logo{
 	  		width: 100%;
 	  		height: 275px;
-	  		background-image: url(../img/omon1.jpg);
+	  		background-color:$lightGrey;
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;
 			border-bottom: 3px solid $red;
 			position: relative;
-
+			
 			.filter{
 				width: 100%;
 				height:100%;
 				position: absolute;
 				background:rgba(0,0,0,.35);
-
+				
 				p{
 					height: 100%;
 					display: flex;

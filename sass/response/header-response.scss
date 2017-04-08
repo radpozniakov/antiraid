@@ -119,6 +119,7 @@
     .navigation-top {
       height: 70px;
       ul{
+
         position: fixed;
         width: 300px;
         height: 100%;
@@ -126,6 +127,24 @@
         left: -300px;
         top: 0px;
         display: block;
+        &.in{
+          left: 0px;
+          z-index:10;
+        }
+         &.default{
+          left: -300px;
+          z-index:0;
+        }
+        button{
+          position:absolute;
+          top:0px;
+          right:5px;
+          background:none;
+          border:none;
+          color:$white;
+          font-size:2rem;
+          padding-right:15px;
+        }
         li{
           display: block;
           padding: 15px 15px;

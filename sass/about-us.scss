@@ -74,10 +74,10 @@ main.container-fluid.about{
 							margin-left:10px;
 							height:125px;
 							
-							box-shadow: 0 0 4px rgba(0,0,0,0.5);
-							background-image: url(../img/coca.jpg);
+							// box-shadow: 0 0 4px rgba(0,0,0,0.5);
+							
 							background-repeat: no-repeat;
-							background-size: cover;
+							background-size: contain;
 							background-position: center;
 							&:hover{
 								box-shadow: 0 2px 6px 0px rgba(0,0,0,0.5);
