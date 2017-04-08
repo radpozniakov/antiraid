@@ -11,7 +11,14 @@
   span{
     @include font($Sams, 1rem, 300, $grey);
     margin-right: 20px;
-    text-transform: uppercase;
+    text-transform: uppercase
+
+  }
+  a{
+      @include font($Sams, 1rem, 300, $grey);
+      &:hover{
+        color:$red;
+      }
   }
 }
 .single-news-title{
@@ -171,7 +178,7 @@ hr{
         @include font($Sams, 0.9rem, 400, $grey);
       }
     }
-    p.description{
+    .description p{
       @include font($Sams, 1rem, 400, $main_black);
       line-height: 1.5rem;
     }

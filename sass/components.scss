@@ -204,6 +204,9 @@ span.tag-for-news{
 				width:100%;
 			  }
 		}
+		&:hover:not(.active){
+			background-color:lighten($red, 35%);
+		}
 
 	}
 }

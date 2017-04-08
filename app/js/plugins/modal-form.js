@@ -39,6 +39,9 @@ $(function(){
 		event.preventDefault();
 
 	})
+	$('button.close-modal-group').click(function(){
+		$('button.mfp-close').click();
+	})
 
 
 
