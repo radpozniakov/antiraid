@@ -9,14 +9,22 @@
 		margin:0px auto;
 	}
 }
-.album-list{
+.psgal{
+	width: 100%!important;
 	figure{
 		margin: 0px;
+		figcaption{
+			background-color: $white;
+			@include font($Sams, 0.9rem, 300, $dark_grey);
+			line-height: 1.4rem;
+			padding: 5px 24px 15px;
+			margin-top: -7px;
+		}
 	}
 	display:flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	.album-item{
+	.msnry_item{
 		width: 32%;
 		margin-bottom: 24px;
 		img{

@@ -38,8 +38,8 @@ $('.popup-with-form').magnificPopup({
 window.onload = function() {
   (function () {
     try{
-      $('.album-list').masonry({
-        itemSelector: '.album-item',
+      $('.psgal').masonry({
+        itemSelector: '.msnry_item',
         gutter: 23
       });
     }catch(e){
