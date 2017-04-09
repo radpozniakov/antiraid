@@ -33,7 +33,7 @@
       }catch (e){
         console.log(e);
       }
-
+    
 
 
         //////////////////////////////////////////////////////////////
@@ -46,7 +46,9 @@
        autoplayTimeout:6000,
        responsiveClass:true,
        margin:0,
+        nav:true,
        smartSpeed:1000,
+        animateOut: 'flipOutY',
        autoplayHoverPause:true,
        responsive:{
          0:{
@@ -66,6 +68,14 @@
      $('.stop').on('click',function(){
        owl_index.trigger('stop.owl_index.autoplay')
      })
+     $('.navigation-prev').click(function(event) {
+        $('.owl-prev').click();
+         event.preventDefault;
+     });
+     $('.navigation-next').click(function(event) {
+         $('.owl-next').click();
+         event.preventDefault;
+     });
    }catch (e){
         console.log(e);
    }
