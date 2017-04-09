@@ -48,7 +48,7 @@
        margin:0,
         nav:true,
        smartSpeed:1000,
-        animateOut: 'flipOutY',
+        // animateOut: 'flipOutY',
        autoplayHoverPause:true,
        responsive:{
          0:{
