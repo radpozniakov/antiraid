@@ -102,15 +102,12 @@
                     <li><a href="#">#ПротивКоррупции</a></li>
                 </ul>
             </div>
-
-
-            <form class="search" action="">
+            <form class="search">
                 <input class="form-control search" type="text" placeholder="поиск по сайту" id="in_search">
-                <button class="btn btn-default" type="submit">
+                <button class="btn btn-default" type="button">
                     <i class="fa fa-search"></i>
                 </button>
             </form>
-
         </div>
     </div>
 </header>
@@ -129,7 +126,7 @@
             <label for="modal-text">Текст сообщения</label>
             <textarea name="modal-text" id="modal-text" rows="7"></textarea>
         </div>
-
+         <p class="modal_notification success"></p>
         <div class="button-group">
             <button class="submit-modal-group"  title="Отправить" type="submit">Отправить</button>
             <button class="close-modal-group" title="Закрыть" type="reset">Закрыть</button>

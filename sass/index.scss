@@ -115,7 +115,7 @@
 					}
 					&>a{
 
-					    z-index: 1000;
+					    z-index: 3;
 					    text-indent: 200%;
 					    white-space: nowrap;
 					    font-size: 0;
@@ -173,6 +173,13 @@
 						margin: 17px 0px 50px;
 						@include font($Sams, 1rem, 400, $main_black);
 						line-height: 1.625rem;
+					}
+					.tag-for-news{
+						position:relative;
+						z-index:100;
+					}
+					.fa-tags{
+						color:$grey;
 					}
 				}
 		}

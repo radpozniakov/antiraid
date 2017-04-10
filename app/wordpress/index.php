@@ -32,7 +32,7 @@
                 $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
                 $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true);
                 ?>
-
+               
                 <div class="kartinka">
                     <a href="<?php the_permalink(); ?>">
                         <div style="background-image: url('<?php echo $thumbnail_url[0]; ?>')" class="img white"></div>
