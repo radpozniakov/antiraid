@@ -11,12 +11,15 @@
             <div class="main-content">
                 <div class="row">
                     <div class="col-sm-offset-1 col-sm-3 about-us">
-                        <h3>Заголовок</h3>
-                        <p>Предприятие производит широкий ассортимент тканей для специальной и форменной одежды, плащевых, для специального снаряжения</p>
-                        <div class="info">
-                            <p><i class="fa fa-phone" aria-hidden="true"></i> 097-776-25-65</p>
-                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> info@gmail.com</p>
-                        </div>
+                    <?php if ( have_posts() ) : ?>
+                        <?php while ( have_posts() ) : the_post(); ?>
+
+                            <?php the_content(); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                       
+                     </div>
 
                     </div>
                     <div class="col-sm-offset-1 col-sm-6 form">

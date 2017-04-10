@@ -1,9 +1,14 @@
 .photo-albums-list{
-
+@include breakpoint(max-width 1000px){
+	justify-content: space-between;
+}
 	  .photo-album-item{
 		
 		@include breakpoint(max-width 1000px){
 				width: 48.5%;
+				margin-left:0px;
+				margin-right:0px;
+				flex-grow: 0;
 				@include breakpoint(max-width 550px){
 					width: 100%;
 				}
