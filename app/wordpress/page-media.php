@@ -20,12 +20,8 @@
 
             <?php
             $thumb_id = get_post_thumbnail_id();
-            $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+            $thumb_url = wp_get_attachment_image_src($thumb_id,'large', true);
             ?>
-
-
-
-
 
             <div class="photo-album-item white">
 

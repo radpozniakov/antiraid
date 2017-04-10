@@ -6,51 +6,49 @@
                 <h1>О нас</h1>
             </div>
             <div class="main-content">
+
+
+
                 <div class="our-help white">
-                    <h2>— Мы помогаем —</h2>
-                    <p>
-                        Товарищи! рамки и место обучения кадров позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Равным образом рамки и место обучения кадров способствует подготовки и реализации систем массового участия. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем массового участия. Не следует, однако забывать, что консультация с широким активом позволяет оценить значение модели развития. С другой стороны постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных.
-                    </p>
+
+                    <?php if ( have_posts() ) : ?>
+                        <?php while ( have_posts() ) : the_post(); ?>
+
+                            <?php the_content(); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+
                 </div>
+
+
                 <div class="our-comand white">
                     <h2>— Команда —</h2>
+
                     <ul>
+                        <?php
+                        $args = array(
+                            'post_type' => 'team',
+                        );
+                        $the_query = new WP_Query( $args );
+                        ?>
+                        <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
                         <li>
-                            <div class="logo"><img src="<?php bloginfo('template_url'); ?>/img/comand/rad.jpg" alt=""></div>
-                            <h5>Иванов Сергей</h5>
-                            <p class="uppercase">главный редактор</p>
-                            <p>info@gmail.com</p>
+                            <?php
+                            $thumb_id = get_post_thumbnail_id();
+                            $thumb_url = wp_get_attachment_image_src($thumb_id,'medium', true);
+                            ?>
+
+                            <div class="logo"><img src="<?php echo $thumb_url[0]; ?>" alt="<?php the_title(); ?>"></div>
+                            <h5><?php the_title(); ?></h5>
+
+                            <p class="uppercase"><?php the_field('profile'); ?></p>
+                            <p><?php the_field('email'); ?></p>
                         </li>
-                        <li>
-                            <div class="logo"><img src="<?php bloginfo('template_url'); ?>/img/comand/illia.jpg" alt=""></div>
-                            <h5>Петров Валерий</h5>
-                            <p class="uppercase">журналист</p>
-                            <p>info@gmail.com</p>
-                        </li>
-                        <li>
-                            <div class="logo"><img src="<?php bloginfo('template_url'); ?>/img/comand/lesha.jpg" alt=""></div>
-                            <h5>Олексей Лесниченко</h5>
-                            <p class="uppercase">тимлидер</p>
-                            <p>info@gmail.com</p>
-                        </li>
-                        <li>
-                            <div class="logo"><img src="<?php bloginfo('template_url'); ?>/img/comand/rad.jpg" alt=""></div>
-                            <h5>Иванов Сергей</h5>
-                            <p class="uppercase">главный редактор</p>
-                            <p>info@gmail.com</p>
-                        </li>
-                        <li>
-                            <div class="logo"><img src="<?php bloginfo('template_url'); ?>/img/comand/illia.jpg" alt=""></div>
-                            <h5>Петров Валерий</h5>
-                            <p class="uppercase">журналист</p>
-                            <p>info@gmail.com</p>
-                        </li>
-                        <li>
-                            <div class="logo"><img src="<?php bloginfo('template_url'); ?>/img/comand/lesha.jpg" alt=""></div>
-                            <h5>Олексей Лесниченко</h5>
-                            <p class="uppercase">тимлидер</p>
-                            <p>info@gmail.com</p>
-                        </li>
+
+                        <?php endwhile; endif; ?>
+
                     </ul>
                 </div>
 
