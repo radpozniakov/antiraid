@@ -4,24 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>
+
         <?php wp_title( '|', true, 'right' ); ?>
         <?php bloginfo( 'name' ); ?>
+
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <?php wp_head(); ?>
-
-    <!--<link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/plugins/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/plugins/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/plugins/magnific-popup.css">
-    <script defer src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <script defer src="https://use.fontawesome.com/c873fc24b7.js"></script>-->
-
-
+        <?php wp_head(); ?>
 </head>
 <body>
 <header>
@@ -113,12 +102,15 @@
                     <li><a href="#">#ПротивКоррупции</a></li>
                 </ul>
             </div>
-            <form class="search">
+
+
+            <form class="search" action="">
                 <input class="form-control search" type="text" placeholder="поиск по сайту" id="in_search">
-                <button class="btn btn-default" type="button">
+                <button class="btn btn-default" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
             </form>
+
         </div>
     </div>
 </header>

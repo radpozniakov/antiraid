@@ -27,7 +27,50 @@ function wpt_theme_styles() {
     wp_enqueue_script('Awesome','https://use.fontawesome.com/c873fc24b7.js', '', true );
     wp_enqueue_style( 'Font-Roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' );
 }
+
 add_action( 'wp_enqueue_scripts', 'wpt_theme_styles' );
+
+
+function theme_js() {
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', get_template_directory_uri() . '/js/vendor/jquery-2.2.4.min.js', '', '', true );
+    wp_enqueue_script('jquery');
+
+    wp_enqueue_script( 'MagnificPopup', get_template_directory_uri() . '/js/plugins/magnific-popup.min.js', array('jquery'), '', true );
+    wp_enqueue_script( 'modal-form', get_template_directory_uri() . '/js/plugins/modal-form.js', array('jquery', 'MagnificPopup'), '', true );
+
+    if (is_page('kontakty')){
+        wp_enqueue_script( 'contact-form', get_template_directory_uri() . '/js/plugins/contact-form.js', array('jquery', 'modal-form'), '', true );
+    }
+    if ( is_single()){
+        wp_enqueue_script( 'parallax-single', get_template_directory_uri() . '/js/plugins/parallax.js', array('jquery'), '', true );
+        wp_enqueue_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array('parallax-single'), '', true );
+
+    }
+
+    if ( is_singular( 'photoalbums' )){
+        wp_enqueue_style( 'PSW_css', get_template_directory_uri() . '/css/plugins/photoswipe/photoswipe.css');
+        wp_enqueue_style( 'PSW_def', get_template_directory_uri() . '/css/plugins/photoswipe/default-skin/default-skin.css');
+        wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/plugins/masonry.min.js', array('jquery'), '', true );
+        wp_enqueue_script( 'PSW_min_js', get_template_directory_uri() . '/js/plugins/photoswipe/photoswipe.min.js', array('jquery', 'masonry', ), '', true );
+        wp_enqueue_script( 'PSW_def_js', get_template_directory_uri() . '/js/plugins/photoswipe/photoswipe-ui-default.min.js', array('jquery', 'masonry', 'PSW_min_js'), '', true );
+        wp_enqueue_script( 'PSW_run_js', get_template_directory_uri() . '/js/plugins/photoswipe/psw.run.js', array('jquery', 'masonry', 'PSW_min_js', 'PSW_def_js'), '', true );
+        wp_enqueue_script( 'cust_js', get_template_directory_uri() . '/js/custom.js', array('PSW_run_js'), '', true );
+
+    }
+    if ( is_page('Главная страница') ){
+        wp_enqueue_style( 'owl_oNasCss', get_template_directory_uri() . '/css/plugins/owl.carousel.min.css' );
+        wp_enqueue_style( 'owl_oNasDef', get_template_directory_uri() . '/css/plugins/owl.theme.default.min.css');
+        wp_enqueue_script( 'owl_oNasJs', get_template_directory_uri() . '/js/plugins/owl.carousel.min.js', array('jquery'), '', true );
+        wp_enqueue_script( 'plug-custom', get_template_directory_uri() . '/js/plugins/custom.js', array('owl_oNasJs'), '', true );
+}
+
+}
+add_action( 'wp_enqueue_scripts', 'theme_js' );
+
+
+
+
 
 
 
@@ -37,54 +80,69 @@ function new_excerpt_length($length) {
 add_filter('excerpt_length', 'new_excerpt_length');
 
 // Подключение скрипто
-function theme_js() {
-    wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', get_template_directory_uri() . '/js/vendor/jquery-2.2.4.min.js', '', '', true );
-    wp_enqueue_script('jquery');
-
-    wp_enqueue_script( 'MagnificPopup', get_template_directory_uri() . '/js/plugins/magnific-popup.min.js', array('jquery'), '', true );
-    wp_enqueue_script( 'Custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '', true );
-    wp_enqueue_script( 'modal-form', get_template_directory_uri() . '/js/plugins/modal-form.js', array('jquery'), '', true );
-
-}
-add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 
 // Добавление отдельных стилей и скриптов для главной страницы
-function main_page() {
+/*function main_page() {
     if ( is_page('Главная страница') )
         wp_enqueue_style( 'owl_oNasCss', get_template_directory_uri() . '/css/plugins/owl.carousel.min.css' );
-        wp_enqueue_style( 'anim_css', get_template_directory_uri() . '/css/plugins/animate.css' );
         wp_enqueue_style( 'owl_oNasDef', get_template_directory_uri() . '/css/plugins/owl.theme.default.min.css');
         wp_enqueue_script( 'owl_oNasJs', get_template_directory_uri() . '/js/plugins/owl.carousel.min.js', array('jquery'), '', true );
 }
-add_action( 'wp_enqueue_scripts', 'main_page' );
+add_action( 'wp_enqueue_scripts', 'main_page' );*/
 
 
 // Добавление отдельных стилей и скриптов для страницы о нас
-function aboutUs() {
+/*function aboutUs() {
     if ( is_page('o-nas') )
         wp_enqueue_style( 'owl_oNasCss', get_template_directory_uri() . '/css/plugins/owl.carousel.min.css' );
         wp_enqueue_style( 'owl_oNasDef', get_template_directory_uri() . '/css/plugins/owl.theme.default.min.css');
         wp_enqueue_script( 'owl_oNasJs', get_template_directory_uri() . '/js/plugins/owl.carousel.min.js', array('jquery'), '', true );
 }
-add_action( 'wp_enqueue_scripts', 'aboutUs' );
+add_action( 'wp_enqueue_scripts', 'aboutUs' );*/
 
 
 
 // Добавление отдельных стилей и скриптов для страницы о нас
-function contacts() {
+/*function contacts() {
     if ( is_page('kontakty') )
     wp_enqueue_script( 'contact-form', get_template_directory_uri() . '/js/plugins/contact-form.js', array('jquery'), '', true );
 }
-add_action( 'wp_enqueue_scripts', 'contacts' );
+add_action( 'wp_enqueue_scripts', 'contacts' );*/
+
+
+
+
+
+
 
 // Добавление отдельных стилей и скриптов для страницы о нас
-function single_news() {
+/**
+ *
+ */
+/*function single_media() {
+    if ( is_singular( 'photoalbums' ) )
+        wp_enqueue_style( 'PSW_css', get_template_directory_uri() . '/css/plugins/photoswipe/photoswipe.css');
+        wp_enqueue_style( 'PSW_def', get_template_directory_uri() . '/css/plugins/photoswipe/default-skin/default-skin.css');
+        wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/plugins/masonry.min.js', array('jquery'), '', true );
+        wp_enqueue_script( 'PSW_min_js', get_template_directory_uri() . '/js/plugins/photoswipe/photoswipe.min.js', array('jquery', 'masonry', ), '', true );
+        wp_enqueue_script( 'PSW_def_js', get_template_directory_uri() . '/js/plugins/photoswipe/photoswipe-ui-default.min.js', array('jquery', 'masonry', 'PSW_min_js'), '', true );
+        wp_enqueue_script( 'PSW_run_js', get_template_directory_uri() . '/js/plugins/photoswipe/psw.run.js', array('jquery', 'masonry', 'PSW_min_js', 'PSW_def_js'), '', true );
+}
+
+add_action( 'wp_enqueue_scripts', 'single_media' );*/
+
+
+
+
+
+
+// Добавление отдельных стилей и скриптов для страницы о нас
+/*function single_news() {
     if ( is_single() )
         wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/plugins/parallax.js', array('jquery'), '', true );
 }
-add_action( 'wp_enqueue_scripts', 'single_news' );
+add_action( 'wp_enqueue_scripts', 'single_news' );*/
 
 
 ?>

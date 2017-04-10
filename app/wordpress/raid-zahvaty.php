@@ -1,8 +1,8 @@
 <?php
 /*
-Template Name: news-list
+Template Name: stati-list
 */
- get_header();
+get_header();
 
 ?>
 
@@ -14,8 +14,9 @@ Template Name: news-list
 
         <div class="news-list">
 
-            <?php query_posts('cat=4');
-                while (have_posts()) : the_post();?>
+
+            <?php	query_posts('cat=8');
+            while (have_posts()) : the_post();?>
 
                 <div class="news-item">
                     <div class="item-content white">
@@ -26,7 +27,9 @@ Template Name: news-list
                         <a href="<?php the_permalink(); ?>">
                             <?php the_excerpt(); ?>
                         </a>
+
                         <?php the_tags('<i class="fa fa-tags"></i> <span class="tag-for-news">','<span> ',''); ?>
+
                     </div>
 
                     <?php
@@ -46,11 +49,13 @@ Template Name: news-list
 
         </div>
 
+
         <div class="a-more">
             <a class="uppercase" href="#">загрузить еще</a>
         </div>
     </div>
 </main>
+
 
 <?php
 get_footer();

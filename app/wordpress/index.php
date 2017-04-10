@@ -6,7 +6,7 @@
 <main class="container-fluid news">
     <div class="container">
         <div class="title-page">
-            <h1>Заголовок</h1>
+            <h1><?php wp_title('');?></h1>
         </div>
 
         <div class="news-list">
@@ -20,7 +20,7 @@
                         <h2 class="item-card"><?php the_title(); ?></h2>
                     </a>
                     <a href="<?php the_permalink(); ?>">
-                        <p><?php the_excerpt(); ?></p>
+                        <?php the_excerpt(); ?>
                     </a>
 
                     <?php the_tags('<i class="fa fa-tags"></i> <span class="tag-for-news">','<span> ',''); ?>
