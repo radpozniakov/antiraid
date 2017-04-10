@@ -54,6 +54,7 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 function main_page() {
     if ( is_page('Главная страница') )
         wp_enqueue_style( 'owl_oNasCss', get_template_directory_uri() . '/css/plugins/owl.carousel.min.css' );
+        wp_enqueue_style( 'anim_css', get_template_directory_uri() . '/css/plugins/animate.css' );
         wp_enqueue_style( 'owl_oNasDef', get_template_directory_uri() . '/css/plugins/owl.theme.default.min.css');
         wp_enqueue_script( 'owl_oNasJs', get_template_directory_uri() . '/js/plugins/owl.carousel.min.js', array('jquery'), '', true );
 }
