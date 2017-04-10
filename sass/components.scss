@@ -14,6 +14,10 @@ input,textarea{
 	appearance: none;
 	border-radius:0;
 }
+.info-block p.search{
+	@include font($Sams,1.125rem,500,$dark_grey);
+	text-align:center;
+}
 /*  ====================    TAG A "MORE"    ====================*/
 
 .a-more{

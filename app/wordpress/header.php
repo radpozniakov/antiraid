@@ -102,9 +102,15 @@
                     <li><a href="#">#ПротивКоррупции</a></li>
                 </ul>
             </div>
-            <form class="search">
-                <input class="form-control search" type="text" placeholder="поиск по сайту" id="in_search">
-                <button class="btn btn-default" type="button">
+
+
+                 
+
+
+
+            <form class="search" role="search" action="<?php bloginfo('url'); ?>" method="get">
+                <input class="form-control search" type="text" placeholder="поиск по сайту"  id="searchinput" name="s">
+                <button class="btn btn-default" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
             </form>
