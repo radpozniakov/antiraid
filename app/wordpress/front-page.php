@@ -61,7 +61,7 @@
                         $the_query = new WP_Query( $args );
                         ?>
                         <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                        <div class="index-item white one-to-two">
+                        <div class="index-item white <?php the_field('modificator'); ?>">
                              <?php
                                 $thumbnail_id = get_post_thumbnail_id();
                                 $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'large', true );

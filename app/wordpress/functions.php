@@ -6,6 +6,23 @@ add_theme_support( 'post-thumbnails' );
 
 
 
+// поддержка виджетов
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+
+register_sidebar( array(
+    'before_widget' => '<div class="tag-links">',
+    'after_widget' => '</div>',
+    'before_title' => '<p style="display: none">',
+    'after_title' => '</p>',
+    'name' => 'header_tags',
+    'description' => __( 'Специально для популярных тегов в хедере' ),
+) );
 
 
 // Регистрация главного меню
@@ -19,6 +36,16 @@ function register_theme_menus() {
 
 }
 add_action( 'init', 'register_theme_menus' );
+
+
+//Добавление класса active к current page
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+    if( in_array('current-menu-item', $classes) ){
+        $classes[] = 'active ';
+    }
+    return $classes;
+}
 
 
 

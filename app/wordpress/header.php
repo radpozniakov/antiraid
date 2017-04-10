@@ -94,14 +94,10 @@
 
     <div class="bottom-head">
         <div class="container">
-            <div class="tag-links">
-                <ul>
-                    <li><a href="#">#ДимонОтветит</a></li>
-                    <li><a href="#">#ОнВамНеДимон</a></li>
-                    <li><a href="#">#ХочуДомКакУУточки</a></li>
-                    <li><a href="#">#ПротивКоррупции</a></li>
-                </ul>
-            </div>
+
+                    <?php if (!dynamic_sidebar("header_tags") ) : ?>
+                    <?php endif; ?>
+
             <form class="search">
                 <input class="form-control search" type="text" placeholder="поиск по сайту" id="in_search">
                 <button class="btn btn-default" type="button">
