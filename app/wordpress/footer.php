@@ -3,10 +3,10 @@
         <div class="top-footer">
             <div class="about-us">
                 <p class="foot-logo-title">
-                    АнтиРейд
+                    <?php bloginfo( 'name' ); ?>
                 </p>
                 <p class="foot-logo-description">
-                    Центр боротьби з силовими захопленнями підприємств. Боротьби з силовими захопленнями підприємств. боротьби з силовими захопленнями підприємств.
+                    <?php bloginfo( 'description' ); ?>
                 </p>
             </div>
             <div class="meta-foot">
@@ -22,29 +22,17 @@
         </div>
         <nav class="navigation-bottom">
             <ul>
-                <li><a href="#">главная</a></li>
-                <li><a href="#">новости</a></li>
-                <li><a href="#">о нас</a></li>
-                <li><a href="#">статьи</a></li>
-                <li><a href="#">рейдерские захваты</a></li>
-                <li><a href="#">медиа</a></li>
-                <li><a href="#">форум</a></li>
-                <li><a href="#">контакты</a></li>
+                <?php  $defaults = array('theme_location'  => 'footer-menu', 'menu_class'  => '', 'menu_id'  => '', 'container_id' => '', 'container_class' => 'container', 'container' => 'ul');
+                wp_nav_menu( $defaults ); ?>
+
             </ul>
         </nav>
     </div>
-    <div class="from"><p>© 2017 УКРАИНА</p></div>
+    <div class="from">
+        <p>© <? echo strftime("%Y"); ?> УКРАИНА</p>
+    </div>
 </footer>
-<!--    <script defer src="http://code.jquery.com/jquery-2.2.4.min.js"></script>-->
-<!--    <script>window.jQuery || document.write('<script defer src="js/vendor/jquery-2.2.4.min.js"><\/script>')</script>-->
 
-
-<!--    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css'></script>-->
-<!--    -->
-<!--    <script defer src='js/plugins/owl.carousel.min.js'></script>-->
-<!--    <script defer src='js/plugins/magnific-popup.min.js'></script>-->
-<!--    <script defer src='js/plugins/custom.js'></script>-->
-<!--    <script defer src='js/custom.js'></script>-->
 <?php wp_footer(); ?>
 </body>
 </html>

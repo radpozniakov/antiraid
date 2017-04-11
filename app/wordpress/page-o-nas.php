@@ -57,12 +57,12 @@
                 <h2>— Партнеры —</h2>
                 <div class="sponsors-carousel">
                     <div class="owl-carousel owl-theme " id='test'>
-                        <a href="#"><div class="item"></div></a>
-                        <a href="#"><div class="item"></div></a>
-                        <a href="#"><div class="item"></div></a>
-                        <a href="#"><div class="item"></div></a>
-                        <a href="#"><div class="item"></div></a>
-                        <a href="#"><div class="item"></div></a>
+                        <a href="#"><div class="item">gr</div></a>
+                        <a href="#"><div class="item">geg</div></a>
+                        <a href="#"><div class="item">getg</div></a>
+                        <a href="#"><div class="item">ge4tg</div></a>
+                        <a href="#"><div class="item">ge4t</div></a>
+                        <a href="#"><div class="item">ge4tg</div></a>
                     </div>
                 </div>
 

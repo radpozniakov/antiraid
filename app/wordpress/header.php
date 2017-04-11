@@ -44,8 +44,8 @@
                     </svg>
                 </div>
                 <div class="logo-info">
-                    <p class="logo-title">АнтиРейд</p>
-                    <p class="logo-description">Центр боротьби з силовими захопленнями підприємств</p>
+                    <p class="logo-title"><?php bloginfo( 'name' ); ?></p>
+                    <p class="logo-description"><?php bloginfo( 'description' ); ?></p>
                 </div>
             </div>
             <div class="head-contacts">
@@ -67,10 +67,7 @@
 
         <div class="container">
                 <?php
-                $defaults = array(
-
-                    'theme_location'  => 'primary-menu',
-                    'menu_class'  => '',
+                $defaults = array( 'theme_location'  => 'primary-menu','menu_class'  => '',
                     'menu_id'         => '',
                     'container_id'    => '',
                     'container_class' => 'container',

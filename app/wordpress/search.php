@@ -16,7 +16,7 @@
                             $count=$count-1;
                         }
                     }?>
-                       По вашему запросу было найдено <?php if($count==1) echo $count.' публикация';if($count<1) echo 'ПО вашему запросу ничего не найдено';elseif($count>1 and $count<5) echo $count.' публикации';else echo $count.' публикаций';?> 
+                       <?php  wp_title(''); ?>: было найдено <?php if($count==1) echo $count.' публикация';if($count<1) echo 'ПО вашему запросу ничего не найдено';elseif($count>1 and $count<5) echo $count.' публикации';else echo $count.' публикаций';?>
                     </p>
                 </div>
                 <div class="news-list">

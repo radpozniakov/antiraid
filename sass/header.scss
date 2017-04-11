@@ -210,6 +210,15 @@ header{
 			}
 		}
 	}
+	ul.wp-tag-cloud{
+		li{
+			a{
+				&:before{
+					content: '#';
+				}
+			}
+		}
+	}
 }
 .hamburger-menu{
 	display: none;

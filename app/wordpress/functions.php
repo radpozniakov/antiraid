@@ -30,7 +30,8 @@ function register_theme_menus() {
 
     register_nav_menus(
         array(
-            'primary-menu' 	=> __( 'Primary Menu', 'Antiraid' )
+            'primary-menu' 	=> __( 'Primary Menu', 'Antiraid' ),
+            'footer-menu' 	=> __( 'Footer Menu', 'Antiraid' ),
         )
     );
 
@@ -89,13 +90,12 @@ function theme_js() {
         wp_enqueue_script( 'cust_js', get_template_directory_uri() . '/js/custom.js', array('PSW_run_js'), '', true );
 
     }
-    if ( is_page('Главная страница') ){
+    if ( is_page('Главная страница') or is_page('o-nas')){
         wp_enqueue_style( 'owl_oNasCss', get_template_directory_uri() . '/css/plugins/owl.carousel.min.css' );
         wp_enqueue_style( 'owl_oNasDef', get_template_directory_uri() . '/css/plugins/owl.theme.default.min.css');
         wp_enqueue_script( 'owl_oNasJs', get_template_directory_uri() . '/js/plugins/owl.carousel.min.js', array('jquery'), '', true );
         wp_enqueue_script( 'plug-custom', get_template_directory_uri() . '/js/plugins/custom.js', array('owl_oNasJs'), '', true );
 }
-
 }
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
