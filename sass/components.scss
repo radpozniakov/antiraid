@@ -18,6 +18,9 @@ input,textarea{
 	@include font($Sams,1.125rem,500,$dark_grey);
 	text-align:center;
 }
+i.fa-tags{
+	color:$grey;
+}
 /*  ====================    TAG A "MORE"    ====================*/
 
 .a-more{

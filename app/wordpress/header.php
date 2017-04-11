@@ -26,6 +26,7 @@
         <div class="container">
             <div class="logo-group">
                 <div class="logo">
+                    <a href=" <?php bloginfo( 'url' ); ?>">
                     <svg viewBox="0 0 868 868" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <g id="Group" transform="translate(24.000000, 24.000000)">
@@ -42,6 +43,7 @@
                             </g>
                         </g>
                     </svg>
+                    </a>
                 </div>
                 <div class="logo-info">
                     <p class="logo-title">АнтиРейд</p>
@@ -96,6 +98,7 @@
         <div class="container">
 
                     <?php if (!dynamic_sidebar("header_tags") ) : ?>
+          
                     <?php endif; ?>
 
             <form class="search" role="search" action="<?php bloginfo('url'); ?>" method="get">
