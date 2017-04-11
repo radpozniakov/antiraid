@@ -57,12 +57,22 @@
                 <h2>— Партнеры —</h2>
                 <div class="sponsors-carousel">
                     <div class="owl-carousel owl-theme " id='test'>
-                        <a href="#"><div class="item">gr</div></a>
-                        <a href="#"><div class="item">geg</div></a>
-                        <a href="#"><div class="item">getg</div></a>
-                        <a href="#"><div class="item">ge4tg</div></a>
-                        <a href="#"><div class="item">ge4t</div></a>
-                        <a href="#"><div class="item">ge4tg</div></a>
+                    <?php
+                        $args = array(
+                            'post_type' => 'partners',
+                        );
+                        $the_query = new WP_Query( $args );
+                        ?>
+
+                        <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                             <?php
+                                $thumbnail_id = get_post_thumbnail_id();
+                                $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'medium', true );
+
+                                ?>
+                        <a href="<?php the_field('url'); ?>"><div class="item" style="background-image: url('<?php echo $thumbnail_url[0]; ?>')"></div></a>
+
+                         <?php endwhile; endif; ?>
                     </div>
                 </div>
 

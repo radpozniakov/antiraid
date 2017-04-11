@@ -49,8 +49,10 @@ header{
 				display: flex;
 				justify-content: space-between;
 				.logo{
+					position:relative;
 					width: 100px;
 					height: 100px;
+					
 					svg{
 
 						path{
