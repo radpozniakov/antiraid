@@ -22,6 +22,9 @@
             </ul>
         </div>
     </div>
+
+    <?php $options = get_option( 'theme_settings' ); ?>
+
     <div class="top-head">
         <div class="container">
             <div class="logo-group">
@@ -47,16 +50,18 @@
                 </div>
                 <div class="logo-info">
                     <p class="logo-title"><?php bloginfo( 'name' ); ?></p>
-                    <p class="logo-description"><?php bloginfo( 'description' ); ?></p>
+                    <p class="logo-description"><?php echo $options['header_description'] ?></p>
                 </div>
             </div>
             <div class="head-contacts">
                 <ul>
                     <li>
-                        <p><i class="fa fa-phone" aria-hidden="true"></i> 0-800-503-200</p>
+                        <p><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $options['custom_phone'] ?></p>
                     </li>
                     <li>
-                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> info@antiraid.com</p>
+                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+                            <?php echo $options['custom_email'] ?></p>
                     </li>
                 </ul>
             </div>
@@ -78,7 +83,6 @@
                 wp_nav_menu( $defaults );
 
                 ?>
-
             <div class="hamburger-menu">
                 <span>Меню &#9776;</span>
             </div>
@@ -86,7 +90,6 @@
             <div class="help-button">
                 <a class="popup-with-form" href="#modal-form">помощь</a>
             </div>
-
 
         </div>
     </nav>

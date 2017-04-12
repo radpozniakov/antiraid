@@ -1,3 +1,5 @@
+<?php $options = get_option( 'theme_settings' ); ?>
+
 <footer class="container-fluid">
     <div class="container">
         <div class="top-footer">
@@ -6,18 +8,27 @@
                     <?php bloginfo( 'name' ); ?>
                 </p>
                 <p class="foot-logo-description">
-                    <?php bloginfo( 'description' ); ?>
+                    <?php echo $options['footer_description'] ?>
                 </p>
             </div>
             <div class="meta-foot">
-                <ul class="media">
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 
+                <ul class="media">
+                    <?php if(isset($options['facebook_link']) AND $options['facebook_link']!=''):?>
+                        <li><a href="<?php echo $options['facebook_link'] ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <?php endif;?>
+
+                    <?php if(isset($options['vk_link']) AND $options['vk_link']!=''):?>
+                        <li><a href="<?php echo $options['vk_link'] ?>"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                    <?php endif;?>
+
+                    <?php if(isset($options['tw_link']) AND $options['tw_link']!=''):?>
+                        <li><a href="<?php echo $options['tw_link'] ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <?php endif;?>
                 </ul>
-                <p><i class="fa fa-phone" aria-hidden="true"></i>  info@antiraid.com.ua</p>
-                <p><i class="fa fa-envelope-o" aria-hidden="true"></i> 0-800-503-200</p>
+
+                <p><i class="fa fa-phone" aria-hidden="true"></i><?php echo $options['custom_email'] ?></p>
+                <p><i class="fa fa-envelope-o" aria-hidden="true"></i> <?php echo $options['custom_phone'] ?></p>
             </div>
         </div>
         <nav class="navigation-bottom">

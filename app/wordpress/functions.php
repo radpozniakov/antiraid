@@ -103,6 +103,7 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 
 
+include_once('settings.php');
 
 
 

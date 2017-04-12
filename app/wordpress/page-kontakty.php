@@ -45,13 +45,9 @@
                     </div>
                 </div>
             </div>
-            <div class="social-foot">
-                <ul>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> tw.com/AntiRaiders/</a></li>
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> facebook.com/AntiRaiders/</a></li>
-                    <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i> vk.com/AntiRaiders/</a></li>
-                </ul>
-            </div>
+
+            <?php get_template_part( 'social-foot' ); ?>
+
         </div>
     </main>
 
