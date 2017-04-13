@@ -2,7 +2,7 @@
 /*
 Template Name: news-list
 */
-get_header();
+ get_header();
 
 ?>
 
@@ -64,20 +64,17 @@ get_header();
 
                 <?php endwhile; ?>
                 <!-- end of the loop -->
-
-                <div class="test">
                     <!-- pagination here -->
                     <?php
                     if (function_exists(custom_pagination)) {
                         custom_pagination($custom_query->max_num_pages,"",$paged);
                     }
                     ?>
-                </div>
 
                 <?php wp_reset_postdata(); ?>
 
             <?php else:  ?>
-                <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                <p><?php _e( 'Записей нет' ); ?></p>
             <?php endif; ?>
 
         </div>

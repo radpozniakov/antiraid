@@ -45,4 +45,48 @@
 	
 
 }
+.custom-pagination{
 	
+    text-align: center;
+    margin: 25px auto;
+    display: flex;	
+    align-items: flex-end;
+    span{
+    	color: $red;
+    	display: inline-block;
+    	vertical-align: middle;
+    	&.current{
+    		border:2px solid $red;
+	    	padding:5px 10px;
+	    	color:$white;
+	    	background:$red;
+	    	margin-right: 10px;
+    	}
+    	&.dots{
+			margin-right: 10px;
+    	}
+    	&.page-num{
+    		
+    		margin-right: 10px;
+    		@include breakpoint(max-width 600px){
+				display: none;
+			}
+    	}
+    }
+    a{
+    	border:2px solid $red;
+    	padding:5px 10px;
+    	color:$red;
+    	margin-right: 10px;
+    	&.next,&.prev{
+    		border:none;
+    		font-size: 1.5rem;
+    		align-self: center;
+    		padding:0px 0px;
+    		@include breakpoint(max-width 600px){
+				display: none;
+			}
+    	}
+    }
+}
+    
