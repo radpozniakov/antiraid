@@ -61,6 +61,7 @@
                         $the_query = new WP_Query( $args );
                         ?>
                         <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
                         <div class="index-item white <?php the_field('modificator'); ?>">
                              <?php
                                 $thumbnail_id = get_post_thumbnail_id();
@@ -82,12 +83,20 @@
                         </div>
                         <?php endwhile; ?>
                  <?php endif; ?>
-             
-                   
+
+
+
                 </div>
+
+
+
+
                 <div class="a-more">
                     <a class="uppercase" href="#">загрузить еще</a>
                 </div>
+
+
+
             </div>
         </main>
 

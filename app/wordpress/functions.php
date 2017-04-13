@@ -112,70 +112,63 @@ function new_excerpt_length($length) {
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 
-// Подключение скрипто
+function custom_pagination($numpages = '', $pagerange = '', $paged='') {
 
+    if (empty($pagerange)) {
+        $pagerange = 1;
+    }
 
-// Добавление отдельных стилей и скриптов для главной страницы
-/*function main_page() {
-    if ( is_page('Главная страница') )
-        wp_enqueue_style( 'owl_oNasCss', get_template_directory_uri() . '/css/plugins/owl.carousel.min.css' );
-        wp_enqueue_style( 'owl_oNasDef', get_template_directory_uri() . '/css/plugins/owl.theme.default.min.css');
-        wp_enqueue_script( 'owl_oNasJs', get_template_directory_uri() . '/js/plugins/owl.carousel.min.js', array('jquery'), '', true );
+    /**
+     * This first part of our function is a fallback
+     * for custom pagination inside a regular loop that
+     * uses the global $paged and global $wp_query variables.
+     *
+     * It's good because we can now override default pagination
+     * in our theme, and use this function in default quries
+     * and custom queries.
+     */
+    global $paged;
+    if (empty($paged)) {
+        $paged = 1;
+    }
+    if ($numpages == '') {
+        global $wp_query;
+        $numpages = $wp_query->max_num_pages;
+        if(!$numpages) {
+            $numpages = 1;
+        }
+    }
+
+    /**
+     * We construct the pagination arguments to enter into our paginate_links
+     * function.
+     */
+    $pagination_args = array(
+        'base'            => get_pagenum_link(1) . '%_%',
+        'format'          => 'page/%#%',
+        'total'           => $numpages,
+        'current'         => $paged,
+        'show_all'        => False,
+        'end_size'        => 1,
+        'mid_size'        => $pagerange,
+        'prev_next'       => True,
+        'prev_text'       => __('&laquo;'),
+        'next_text'       => __('&raquo;'),
+        'type'            => 'plain',
+        'add_args'        => false,
+        'add_fragment'    => ''
+    );
+
+    $paginate_links = paginate_links($pagination_args);
+
+    if ($paginate_links) {
+        echo "<nav class='custom-pagination'>";
+        echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
+        echo $paginate_links;
+        echo "</nav>";
+    }
+
 }
-add_action( 'wp_enqueue_scripts', 'main_page' );*/
-
-
-// Добавление отдельных стилей и скриптов для страницы о нас
-/*function aboutUs() {
-    if ( is_page('o-nas') )
-        wp_enqueue_style( 'owl_oNasCss', get_template_directory_uri() . '/css/plugins/owl.carousel.min.css' );
-        wp_enqueue_style( 'owl_oNasDef', get_template_directory_uri() . '/css/plugins/owl.theme.default.min.css');
-        wp_enqueue_script( 'owl_oNasJs', get_template_directory_uri() . '/js/plugins/owl.carousel.min.js', array('jquery'), '', true );
-}
-add_action( 'wp_enqueue_scripts', 'aboutUs' );*/
-
-
-
-// Добавление отдельных стилей и скриптов для страницы о нас
-/*function contacts() {
-    if ( is_page('kontakty') )
-    wp_enqueue_script( 'contact-form', get_template_directory_uri() . '/js/plugins/contact-form.js', array('jquery'), '', true );
-}
-add_action( 'wp_enqueue_scripts', 'contacts' );*/
-
-
-
-
-
-
-
-// Добавление отдельных стилей и скриптов для страницы о нас
-/**
- *
- */
-/*function single_media() {
-    if ( is_singular( 'photoalbums' ) )
-        wp_enqueue_style( 'PSW_css', get_template_directory_uri() . '/css/plugins/photoswipe/photoswipe.css');
-        wp_enqueue_style( 'PSW_def', get_template_directory_uri() . '/css/plugins/photoswipe/default-skin/default-skin.css');
-        wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/plugins/masonry.min.js', array('jquery'), '', true );
-        wp_enqueue_script( 'PSW_min_js', get_template_directory_uri() . '/js/plugins/photoswipe/photoswipe.min.js', array('jquery', 'masonry', ), '', true );
-        wp_enqueue_script( 'PSW_def_js', get_template_directory_uri() . '/js/plugins/photoswipe/photoswipe-ui-default.min.js', array('jquery', 'masonry', 'PSW_min_js'), '', true );
-        wp_enqueue_script( 'PSW_run_js', get_template_directory_uri() . '/js/plugins/photoswipe/psw.run.js', array('jquery', 'masonry', 'PSW_min_js', 'PSW_def_js'), '', true );
-}
-
-add_action( 'wp_enqueue_scripts', 'single_media' );*/
-
-
-
-
-
-
-// Добавление отдельных стилей и скриптов для страницы о нас
-/*function single_news() {
-    if ( is_single() )
-        wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/plugins/parallax.js', array('jquery'), '', true );
-}
-add_action( 'wp_enqueue_scripts', 'single_news' );*/
 
 
 ?>

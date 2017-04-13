@@ -32,11 +32,8 @@
             </div>
         </div>
         <nav class="navigation-bottom">
-            <ul>
                 <?php  $defaults = array('theme_location'  => 'footer-menu', 'menu_class'  => '', 'menu_id'  => '', 'container_id' => '', 'container_class' => 'container', 'container' => 'ul');
                 wp_nav_menu( $defaults ); ?>
-
-            </ul>
         </nav>
     </div>
     <div class="from">
