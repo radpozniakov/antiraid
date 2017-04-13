@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: stati-list
+Template Name: zahvaty
 */
 get_header();
 

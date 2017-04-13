@@ -1,9 +1,7 @@
 
 
 footer{
-
 	.top-footer{
-
 		@include breakpoint(max-width 680px) {
 		    flex-direction: column;
 		    padding-bottom: 12px;
@@ -36,10 +34,7 @@ footer{
 		    		text-align: center;
 		    	}
 		    }
-
 		}
-	
-	
 	}
 	.navigation-bottom{
 		@include breakpoint(max-width 680px) {

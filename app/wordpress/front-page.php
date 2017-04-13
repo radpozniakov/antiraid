@@ -52,43 +52,22 @@
                 </div>
             </div>
             <div class="container">
-                <div class="index-list">
 
-                 <?php
-                        $args = array(
-                            'post_type' => 'post',
-                        );
-                        $the_query = new WP_Query( $args );
-                        ?>
-                        <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                        <div class="index-item white <?php the_field('modificator'); ?>">
-                             <?php
-                                $thumbnail_id = get_post_thumbnail_id();
-                                $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'large', true );
-                                $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true);
-                                ?>
-                            <div class="index-img" style="background-image: url('<?php echo $thumbnail_url[0]; ?>');"></div>
-                            <div class="index-content white">
-                                <span class="time uppercase"><?php echo the_time('j');?> <?php echo the_time('F');?> , <?php echo the_time('Y');?></span>
-                                <h2 class="item-card">
-                                    <?php the_title(); ?>
-                                </h2>
-                                <?php the_excerpt(); ?>
-                                 <?php the_tags('<i class="fa fa-tags"></i> <span class="tag-for-news">','<span> ','','<span class="tag-for-news"></span>'); ?>
-                                
-                                
-                            </div>
-                            <a href="<?php the_permalink(); ?>"></a>
-                        </div>
-                        <?php endwhile; ?>
-                 <?php endif; ?>
-             
-                   
+                <style>.alm-reveal{ display: flex; justify-content: space-between; flex-wrap: wrap;}</style>
+
+                    <?php
+                    $query = new WP_Query($args);
+                    while ( $query->have_posts() ) : $query->the_post();
+                        $do_not_duplicate[] = $post->ID; // Store post ID in array
+                    endwhile; wp_reset_query();
+
+                    // Ajax Load More
+                    if($do_not_duplicate){
+                        $post__not_in = implode(',', $do_not_duplicate);
+                    }
+                    echo do_shortcode('[ajax_load_more container_type="div" css_classes="index-list" post_type="post" posts_per_page="9" button_label="Загрузить еще" button_loading_label="Загрузка"]');
+                    ?>
                 </div>
-                <div class="a-more">
-                    <a class="uppercase" href="#">загрузить еще</a>
-                </div>
-            </div>
         </main>
 
 

@@ -13,59 +13,35 @@ get_header();
                 </div>
                 <div class="main-content archive">
                    <div class="categories-archive white">
-                        <h2>Категории</h2>
+                        <h2>Публикации по категориям</h2>
                        <ul>
-                           <li><a href="#">ТЕСТ</a></li>
-                           <li><a href="#">ТЕСТТЕСТ</a></li>
-                           <li><a href="#">ТЕСТТЕСТТЕСТ</a></li>
-                           <li><a href="#">ТЕСТТЕСТ</a></li>
-                           <li><a href="#">ТЕСТТЕСТ</a></li>
-                           <li><a href="#">ТЕСТТЕСТТЕСТ</a></li>
-                           <li><a href="#">ТЕСТ</a></li>
-                           <li><a href="#">ТЕСТ</a></li>
+                           <?php $args = array(
+                                   'orderby' => 'name',
+                                   'hierarchical' =>  false,
+                                   'title_li' => ''
+                                );
+                               wp_list_categories($args);?>
                        </ul>
+
                    </div>
                    <div class="year-archive white">
                         <h2>Публикации по годам</h2>
                        <ul>
-                           <li><a href="#">2016</a></li>
-                           <li><a href="#">2016</a></li>
-                           <li><a href="#">2016</a></li>
-                           <li><a href="#">2016</a></li>
-                           <li><a href="#">2016</a></li>
-                           <li><a href="#">2016</a></li>
-                           <li><a href="#">2016</a></li>
-                           <li><a href="#">2016</a></li>
+                           <?php  wp_get_archives(array('type' => 'yearly')); ?>
+
                        </ul>
                    </div>
                    <div class="month-archive white">
                         <h2>Публикации по месяцам</h2>
                        <ul>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
-                           <li><a href="#">тест 2016</a></li>
+                           <?php  wp_get_archives(array('type' => 'monthly')); ?>
+                       </ul>
+                   </div>
 
+                    <div class="white">
+                        <h2>Все публикации</h2>
+                       <ul>
+                           <?php  wp_get_archives(array('type' => 'postbypost')); ?>
                        </ul>
                    </div>
 

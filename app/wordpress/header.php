@@ -74,14 +74,8 @@
 
         <div class="container">
                 <?php
-                $defaults = array( 'theme_location'  => 'primary-menu','menu_class'  => '',
-                    'menu_id'         => '',
-                    'container_id'    => '',
-                    'container_class' => 'container',
-                    'container'       => 'ul',
-                );
-                wp_nav_menu( $defaults );
-
+                    $defaults = array( 'theme_location'  => 'primary-menu','menu_class'  => '', 'menu_id' => '', 'container_id' => '', 'container_class' => 'container', 'container'  => 'ul',);
+                    wp_nav_menu( $defaults );
                 ?>
             <div class="hamburger-menu">
                 <span>Меню &#9776;</span>
