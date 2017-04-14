@@ -20,11 +20,11 @@
 			margin:0px auto;
 			li{
 				border:2px solid $red;
-				
+				text-align: center;
 				margin:0px 21px 18px 0px;
 				position: relative;
 				a{
-					@include font($Sams,1rem,500,$red);
+					@include font($Sams,1rem,400,$red);
 					padding:10px 25px;
 					display: inline-block;
 

@@ -1,13 +1,15 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: page-o-nas
+*/
+get_header(); ?>
 
     <main class="container-fluid about">
         <div class="container">
             <div class="title-page">
-                <h1>О нас</h1>
+                <h1><?php wp_title(''); ?></h1>
             </div>
             <div class="main-content">
-
-
 
                 <div class="our-help white">
 
@@ -23,7 +25,7 @@
 
 
                 <div class="our-comand white">
-                    <h2>— Команда —</h2>
+                    <h2>— <?php echo tStr('o_nas_team_title');?> —</h2>
 
                     <ul>
                         <?php
@@ -54,7 +56,7 @@
 
             </div>
             <div class="our-sponsors white">
-                <h2>— Партнеры —</h2>
+                <h2>— <?php echo tStr('o_nas_partners_title');?> —</h2>
                 <div class="sponsors-carousel">
                     <div class="owl-carousel owl-theme " id='test'>
                     <?php

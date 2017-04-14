@@ -1,14 +1,17 @@
-<?php get_header(); ?>
+<?php get_header();
+/*
+Template Name: Media
+*/
+?>
 
 <main class="container-fluid news">
     <div class="container">
         <div class="title-page-with-a">
-            <a href="<?php echo get_page_link(23); ?>" class="uppercase active">фотоальбомы</a>
-            <a href="<?php echo get_page_link(25); ?>" class="uppercase ">видео </a>
+            <a href="<?php echo get_page_link(23); ?>" class="uppercase active"><?php echo tStr('media_photoalbums');?></a>
+            <a href="<?php echo get_page_link(25); ?>" class="uppercase "><?php echo tStr('media_videos');?></a>
         </div>
 
         <div class="photo-albums-list">
-
 
             <?php
             $args = array(
@@ -36,25 +39,12 @@
                 <a href="<?php the_permalink(); ?>" class="hack"></a>
             </div>
 
-
-
             <?php endwhile; endif; ?>
-
-
-
-
-
-
 
         </div>
 
-        <!--<div class="a-more">
-            <a class="uppercase" href="#">загрузить еще</a>
-        </div>-->
     </div>
 </main>
-
-
 
 <?php get_footer(); ?>
 

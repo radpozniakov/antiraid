@@ -1,9 +1,8 @@
-
 .news-list{
 	margin-bottom: 24px;
 	display: flex;
 	flex-direction: column;
-		
+
 	.news-item{
 		display: flex;
 		justify-content: space-between;
@@ -19,7 +18,7 @@
 					margin:17px 0px 50px;
 					@include font($Sams, 1rem, 400, $main_black);
 					line-height: 1.625rem;
-					
+
 				}
 				text-decoration: none;
 
@@ -32,10 +31,10 @@
 			}
 		}
 		.kartinka {
-		width:32%;
-		position:absolute;
-		height:100%;
-		right:0px;
+			width:32%;
+			position:absolute;
+			height:100%;
+			right:0px;
 			.img{
 				height:100%;
 				background-image: url(../img/omon.jpg);
@@ -46,63 +45,62 @@
 
 		}
 	}
-	
+
 
 }
 .custom-pagination{
-	
-    text-align: center;
-    margin: 25px auto;
-    display: flex;
-    -webkit-display: flex;
-     
-    align-items: flex-end;
-	 -webkit-align-items: flex-end;
-	 -webkit-justify-content: center;
-    span{
-    	color: $red;
-    	display: inline-block;
-    	vertical-align: middle;
-    	&.current{
-    		border:2px solid $red;
-	    	padding:5px 10px;
-	    	color:$white;
-	    	background:$red;
-	    	margin-right: 10px;
-    	}
-    	&.dots{
+
+	text-align: center;
+	margin: 25px auto;
+	display: flex;
+	-webkit-display: flex;
+
+	align-items: flex-end;
+	-webkit-align-items: flex-end;
+	-webkit-justify-content: center;
+	span{
+		color: $red;
+		display: inline-block;
+		vertical-align: middle;
+		&.current{
+			border:2px solid $red;
+			padding:5px 10px;
+			color:$white;
+			background:$red;
 			margin-right: 10px;
-    	}
-    	&.page-num{
-    		
-    		margin-right: 10px;
-    		@include breakpoint(max-width 600px){
+		}
+		&.dots{
+			margin-right: 10px;
+		}
+		&.page-num{
+
+			margin-right: 10px;
+			@include breakpoint(max-width 600px){
 				display: none;
 			}
-    	}
-    }
-    a{
-    	border:2px solid $red;
-    	padding:5px 10px;
-    	color:$red;
-    	margin-right: 10px;
-    	&.next,&.prev{
-    		border:none;
-    		font-size: 1.5rem;
-    		align-self: center;
-    		padding:0px 0px;
-    		@include breakpoint(max-width 600px){
+		}
+	}
+	a{
+		border:2px solid $red;
+		padding:5px 10px;
+		color:$red;
+		margin-right: 10px;
+		&.next,&.prev{
+			border:none;
+			font-size: 1.5rem;
+			align-self: center;
+			padding:0px 0px;
+			@include breakpoint(max-width 600px){
 				display: none;
 			}
 			&:hover{
-	    		background:none;
-	    		color:lighten($red,20%);
-    		}
-    	}
-    	&:hover{
-    		background:$red;
-    		color:$white;
-    	}
-    }
+				background:none;
+				color:lighten($red,20%);
+			}
+		}
+		&:hover{
+			background:$red;
+			color:$white;
+		}
+	}
 }
-    

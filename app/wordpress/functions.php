@@ -4,6 +4,18 @@ add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' );
 
 
+// Defer jQuery Parsing using the HTML5 defer property
+if (!(is_admin() )) {
+    function defer_parsing_of_js ( $url ) {
+        if ( FALSE === strpos( $url, '.js' ) ) return $url;
+        if ( strpos( $url, 'jquery.js' ) ) return $url;
+        // return "$url' defer ";
+        return "$url' defer='defer";
+    }
+    add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+}
+
+
 
 
 // поддержка виджетов
@@ -71,7 +83,7 @@ function theme_js() {
     wp_enqueue_script( 'MagnificPopup', get_template_directory_uri() . '/js/plugins/magnific-popup.min.js', array('jquery'), '', true );
     wp_enqueue_script( 'modal-form', get_template_directory_uri() . '/js/plugins/modal-form.js', array('jquery', 'MagnificPopup'), '', true );
 
-    if (is_page('kontakty')){
+    if (is_page('kontakty') or is_page('kontakti') ){
         wp_enqueue_script( 'contact-form', get_template_directory_uri() . '/js/plugins/contact-form.js', array('jquery', 'modal-form'), '', true );
     }
     if ( is_single()){
@@ -90,7 +102,7 @@ function theme_js() {
         wp_enqueue_script( 'cust_js', get_template_directory_uri() . '/js/custom.js', array('PSW_run_js'), '', true );
 
     }
-    if ( is_page('Главная страница') or is_page('o-nas') ){
+    if ( is_page('Главная страница') or is_page('o-nas') or is_page('pro-nas') or is_page('golovna-storinka') ){
         wp_enqueue_style( 'owl_oNasCss', get_template_directory_uri() . '/css/plugins/owl.carousel.min.css' );
         wp_enqueue_style( 'owl_oNasDef', get_template_directory_uri() . '/css/plugins/owl.theme.default.min.css');
         wp_enqueue_script( 'owl_oNasJs', get_template_directory_uri() . '/js/plugins/owl.carousel.min.js', array('jquery'), '', true );
@@ -104,6 +116,7 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 
 
 include_once('settings.php');
+include 'inc/global.php';
 
 
 
@@ -163,12 +176,10 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
 
     if ($paginate_links) {
         echo "<nav class='custom-pagination'>";
-        echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
+//        echo "<span class='page-numbers page-num'>Страница " . $paged . " из " . $numpages . "</span> ";
         echo $paginate_links;
         echo "</nav>";
     }
-
 }
-
 
 ?>
