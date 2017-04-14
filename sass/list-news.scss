@@ -9,6 +9,7 @@
 		justify-content: space-between;
 		width: 100%;
 		margin-bottom: 24px;
+		position:relative;
 		.item-content{
 			width: 64%;
 			border-top:3px solid $red;
@@ -31,7 +32,10 @@
 			}
 		}
 		.kartinka {
-			width:32%;
+		width:32%;
+		position:absolute;
+		height:100%;
+		right:0px;
 			.img{
 				height:100%;
 				background-image: url(../img/omon.jpg);
@@ -49,8 +53,12 @@
 	
     text-align: center;
     margin: 25px auto;
-    display: flex;	
+    display: flex;
+    -webkit-display: flex;
+     
     align-items: flex-end;
+	 -webkit-align-items: flex-end;
+	 -webkit-justify-content: center;
     span{
     	color: $red;
     	display: inline-block;
@@ -86,6 +94,14 @@
     		@include breakpoint(max-width 600px){
 				display: none;
 			}
+			&:hover{
+	    		background:none;
+	    		color:lighten($red,20%);
+    		}
+    	}
+    	&:hover{
+    		background:$red;
+    		color:$white;
     	}
     }
 }

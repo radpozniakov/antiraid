@@ -39,6 +39,9 @@
 			}
 		}
 		.kartinka {
+				@include breakpoint(max-width 768px){
+					position:static;
+				}
 			width:34%;
 			@include breakpoint(max-width 768px){
 				width:100%;
