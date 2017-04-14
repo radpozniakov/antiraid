@@ -1,12 +1,17 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: Contacts
+*/
+get_header();
 
+?>
     <!--[if lt IE 8]>
     <p class="browserupgrade">Вы используете<strong>старый</strong> браузер. Пожалуйста обновите свой браузер.</p>
     <![endif]-->
     <main class="container-fluid contacts">
         <div class="container">
             <div class="title-page">
-                <h1>Контакты</h1>
+                <h1><?php wp_title(''); ?></h1>
             </div>
             <div class="main-content">
                 <div class="row">
@@ -26,7 +31,7 @@
                         <form id='form-contact' action="#">
                             <div class="row">
                                 <div class="form-group col-sm-6">
-                                    <label for="contact-name">Имя</label>
+                                    <label for="contact-name"><?php echo tStr('form_send_name');?></label>
                                     <input type="text" class="  form-control" id="contact-name" name="contact-name">
                                 </div>
                                 <div class="form-group col-sm-6">
@@ -36,11 +41,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="contact-area">Текст сообщения</label>
+                                <label for="contact-area"><?php echo tStr('form_text');?></label>
                                 <textarea class="form-control " rows="5" id="contact-area" name="contact-area"></textarea>
                             </div>
                             <p class="notification"></p>
-                            <button type="submit" class="btn btn-default" id='contact-buttom'>отправить</button>
+                            <button type="submit" class="btn btn-default" id='contact-buttom'><?php echo tStr('form_send_text');?></button>
                         </form>
                     </div>
                 </div>

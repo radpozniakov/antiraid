@@ -2,7 +2,6 @@
  get_header();
 ?>
 
-
 <main class="container-fluid news">
     <div class="container">
         <div class="title-page">
@@ -41,17 +40,22 @@
             </div>
 
             <?php endwhile; ?>
+                <?php
+                if (function_exists(custom_pagination)) {
+                    custom_pagination($custom_query->max_num_pages,"",$paged);
+                }
+                ?>
             <?php endif; ?>
-        </div>
-
-
-        <div class="a-more">
-            <a class="uppercase" href="#">загрузить еще</a>
         </div>
     </div>
 </main>
-
-
 <?php
  get_footer();
 ?>
+
+
+
+
+
+
+

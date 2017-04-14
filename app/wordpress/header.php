@@ -17,8 +17,12 @@
     <div class="localization">
         <div class="container">
             <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <?php
+                    $lang = pll_the_languages(['raw'=>1]);
+                    foreach ($lang as $item){
+                        echo '<li><a href="'.$item['url'].'" title="'.$item['name'].'"></a></li>';
+                    }
+                ?>
             </ul>
         </div>
     </div>
@@ -66,7 +70,7 @@
                 </ul>
             </div>
             <div class="head-button">
-                <a href="#modal-form" class="popup-with-form">повідомити про<br><b>захоплення</b></a>
+                <a href="#modal-form" class="popup-with-form"><?php echo tStr('header_help_button');?></a>
             </div>
         </div>
     </div>
@@ -74,7 +78,7 @@
 
         <div class="container">
                 <?php
-                    $defaults = array( 'theme_location'  => 'primary-menu','menu_class'  => '', 'menu_id' => '', 'container_id' => '', 'container_class' => 'container', 'container'  => 'ul',);
+                    $defaults = array( 'theme_location'  => 'primary-menu','menu_class'  => 'navigation_custom_all_lg', 'menu_id' => '', 'container_id' => '', 'container_class' => 'container', 'container'  => 'ul',);
                     wp_nav_menu( $defaults );
                 ?>
             <div class="hamburger-menu">
@@ -82,7 +86,7 @@
             </div>
 
             <div class="help-button">
-                <a class="popup-with-form" href="#modal-form">помощь</a>
+                <a class="popup-with-form" href="#modal-form"><?php echo tStr('text_help_button');?></a>
             </div>
 
         </div>
@@ -96,7 +100,7 @@
                     <?php endif; ?>
 
             <form class="search" role="search" action="<?php bloginfo('url'); ?>" method="get">
-                <input class="form-control search" type="text" placeholder="поиск по сайту"  id="searchinput" name="s">
+                <input class="form-control search" type="text" placeholder="<?php echo tStr('search_site');?>"  id="searchinput" name="s">
                 <button class="btn btn-default" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
@@ -106,8 +110,8 @@
 </header>
 
 <div id="modal-form" class="modal-form white-popup-block mfp-hide">
-    <h3>Сообщить про захват</h3>
-    <p>Опишите вашу ситуацию, мы обязательно свяжемся с вами, проконсультируем и поможем</p>
+    <h3><?php echo tStr('header_help_button');?></h3>
+    <p><?php echo tStr('modal_form_descriprion');?></p>
     <hr>
     <form action="">
         <div class="form-group">
@@ -116,13 +120,13 @@
         </div>
 
         <div class="form-group">
-            <label for="modal-text">Текст сообщения</label>
+            <label for="modal-text"><?php echo tStr('form_text');?></label>
             <textarea name="modal-text" id="modal-text" rows="7"></textarea>
         </div>
-         <p class="modal_notification success"></p>
+        <p class="modal_notification success"></p>
         <div class="button-group">
-            <button class="submit-modal-group"  title="Отправить" type="submit">Отправить</button>
-            <button class="close-modal-group" title="Закрыть" type="reset">Закрыть</button>
+            <button class="submit-modal-group"  title="Отправить" type="submit"><?php echo tStr('form_send_text');?></button>
+            <button class="close-modal-group" title="Закрыть" type="reset"><?php echo tStr('form_close');?></button>
         </div>
     </form>
 </div>

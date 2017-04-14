@@ -3,7 +3,7 @@
 <main class="container-fluid about">
     <div class="container">
         <div class="title-page">
-            <h1><?php wp_title();?></h1>
+            <h1><?php wp_title('');?></h1>
         </div>
         <div class="main-content">
             <div class="our-help white">

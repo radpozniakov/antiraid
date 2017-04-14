@@ -1,9 +1,8 @@
 <?php
 /*
-Template Name: news-list
+Template Name: uk-list-news
 */
- get_header();
-
+get_header();
 ?>
 
 <main class="container-fluid news">
@@ -14,13 +13,14 @@ Template Name: news-list
 
         <div class="news-list">
 
+
             <?php
 
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
             $custom_args = array(
                 'post_type' => 'post',
-                'cat' => 4,
+                'cat' => 43,
                 'posts_per_page' => 7,
                 'paged' => $paged
             );
@@ -49,10 +49,10 @@ Template Name: news-list
                         </div>
 
                         <?php
-                                            $thumbnail_id = get_post_thumbnail_id();
-                                            $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'large', true );
-                                            $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true);
-                                            ?>
+                        $thumbnail_id = get_post_thumbnail_id();
+                        $thumbnail_url = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail-size', true );
+                        $thumbnail_meta = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true);
+                        ?>
 
                         <div class="kartinka">
                             <a href="<?php the_permalink(); ?>">
@@ -64,12 +64,12 @@ Template Name: news-list
 
                 <?php endwhile; ?>
                 <!-- end of the loop -->
-                    <!-- pagination here -->
-                    <?php
-                    if (function_exists(custom_pagination)) {
-                        custom_pagination($custom_query->max_num_pages,"",$paged);
-                    }
-                    ?>
+                <!-- pagination here -->
+                <?php
+                if (function_exists(custom_pagination)) {
+                    custom_pagination($custom_query->max_num_pages,"",$paged);
+                }
+                ?>
 
                 <?php wp_reset_postdata(); ?>
 

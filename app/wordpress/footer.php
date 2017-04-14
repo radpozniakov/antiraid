@@ -37,7 +37,7 @@
         </nav>
     </div>
     <div class="from">
-        <p>© <? echo strftime("%Y"); ?> УКРАИНА</p>
+        <p>© <? echo strftime("%Y"); ?> <?php echo tStr('country_name');?></p>
     </div>
 </footer>
 

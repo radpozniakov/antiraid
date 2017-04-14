@@ -1,5 +1,8 @@
-<?php get_header(); ?>
-
+<?php get_header();
+/*
+Template Name: front-page
+*/
+?>
     <!--         ========================== END HEADER ==========================
         [if lt IE 8]>
     <p class="browserupgrade">Вы используете<strong>старый</strong> браузер. Пожалуйста обновите свой браузер.</p>
@@ -20,7 +23,17 @@
                             <h2>
                                 Радион Поздняков набрал команду про проходу дебрей js фреймворков
                             </h2>
-                            
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="item">
+                        <a href="#"></a>
+                        <div class="dark"></div>
+                        <div class="index-slider-text container">
+                            <h2>
+                                Радион Поздняков набрал команду про проходу дебрей js фреймворков
+                            </h2>
                         </div>
                         
                         
@@ -34,20 +47,7 @@
                             </h2>
                             
                         </div>
-                        
-                        
-                    </div>
-                    <div class="item">
-                        <a href="#"></a>
-                        <div class="dark"></div>
-                        <div class="index-slider-text container">
-                            <h2>
-                                Радион Поздняков набрал команду про проходу дебрей js фреймворков
-                            </h2>
-                            
-                        </div>
-                        
-                        
+
                     </div>
                 </div>
             </div>
@@ -84,18 +84,7 @@
                         <?php endwhile; ?>
                  <?php endif; ?>
 
-
-
                 </div>
-
-
-
-
-                <div class="a-more">
-                    <a class="uppercase" href="#">загрузить еще</a>
-                </div>
-
-
 
             </div>
         </main>
